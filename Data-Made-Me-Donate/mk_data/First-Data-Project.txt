@@ -1,0 +1,5 @@
+Links for the iPython Notebook that go with the First Data Project:
+
+http://nbviewer.ipython.org/github/jmportilla/Udemy-notes/blob/master/Intro%20to%20Data%20Project%20Section.ipynb
+
+http://nbviewer.ipython.org/github/jmportilla/Udemy-notes/blob/master/Intro%20to%20Data%20Projects%20-%20Titanic.ipynb
