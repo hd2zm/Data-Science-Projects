@@ -17,12 +17,12 @@ mk_pit_file = 'Cumulative_MK_PIT_Cleaned_Results_2007_to_2018'
 import pandas as pd
 from pandas import Series,DataFrame
 
-federal_coc_pit_excel_file = pd.ExcelFile(federal_folder + '/' + federal_coc_pit_file + '.xlsx')
-federal_state_pit_excel_file = pd.ExcelFile(federal_folder + '/' + federal_state_pit_file + '.xlsx')
+federal_coc_pit_excel_file = pd.ExcelFile('data/' + federal_folder + '/' + federal_coc_pit_file + '.xlsx')
+federal_state_pit_excel_file = pd.ExcelFile('data/' + federal_folder + '/' + federal_state_pit_file + '.xlsx')
 
-mk_pit_excel_file = pd.ExcelFile(mk_folder + '/' + mk_pit_file + '.xlsx')
+mk_pit_excel_file = pd.ExcelFile('data/' + mk_folder + '/' + mk_pit_file + '.xlsx')
 
-mk_pit_data = mk_pit_excel_file.parse('Sheet2')
+mk_pit_data = pd.read_excel(mk_pit_excel_file, 'Sheet2')
 
 state_key = 7
 coc_key = 68
@@ -32,15 +32,14 @@ ratio_th_dict = {}
 ratio = lambda subset,total: subset/total 
 
 for mk_key in mk_pit_data.keys():
-    federal_state_pit_data = federal_state_pit_excel_file.parse(str(mk_key))
-    federal_coc_pit_data = federal_coc_pit_excel_file.parse(str(mk_key))
-
-    ratio_th_dict[mk_key] = {}
-   
-    ratio_th_dict[mk_key]['Federal State PIT'] = ratio(federal_state_pit_data['Sheltered TH Homeless, ' + str(mk_key)][state_key], federal_state_pit_data['Overall Homeless, ' + str(mk_key)][state_key])
-    ratio_th_dict[mk_key]['Federal CoC PIT'] = ratio(federal_coc_pit_data['Sheltered TH Homeless, ' + str(mk_key)][coc_key], federal_coc_pit_data['Overall Homeless, ' + str(mk_key)][coc_key]) 
-    ratio_th_dict[mk_key]['MK PIT'] = ratio(int(float(mk_pit_data[mk_key]['Shelter / Transitional Housing']) * int(mk_pit_data[mk_key]['Surveys Completed'])), int(mk_pit_data[mk_key]['Surveys Completed'])) 
-
+	federal_state_pit_data = pd.read_excel(federal_state_pit_excel_file, str(mk_key))
+	federal_coc_pit_data = pd.read_excel(federal_coc_pit_excel_file, str(mk_key))
+	
+	ratio_th_dict[mk_key] = {}
+	
+	ratio_th_dict[mk_key]['Federal State PIT'] = ratio(federal_state_pit_data['Sheltered TH Homeless, ' + str(mk_key)][state_key], federal_state_pit_data['Overall Homeless, ' + str(mk_key)][state_key])
+	ratio_th_dict[mk_key]['Federal CoC PIT'] = ratio(federal_coc_pit_data['Sheltered TH Homeless, ' + str(mk_key)][coc_key], federal_coc_pit_data['Overall Homeless, ' + str(mk_key)][coc_key]) 
+	ratio_th_dict[mk_key]['MK PIT'] = ratio(int(float(mk_pit_data[mk_key]['Shelter / Transitional Housing']) * int(mk_pit_data[mk_key]['Surveys Completed'])), int(mk_pit_data[mk_key]['Surveys Completed'])) 
 
 ratio_th_pit_df = pd.DataFrame(data = ratio_th_dict).T
 
@@ -49,6 +48,11 @@ print(ratio_th_pit_df.head())
 import seaborn as sns
 
 sns.violinplot(x="PIT Categories", y="Sheltered TH Homeless PIT Ratio", data=pd.melt(ratio_th_pit_df, var_name='PIT Categories', value_name='Sheltered TH Homeless PIT Ratio'))
+
+sns.swarmplot(x="PIT Categories", y="Sheltered TH Homeless PIT Ratio", data=pd.melt(ratio_th_pit_df, var_name='PIT Categories', value_name='Sheltered TH Homeless PIT Ratio'), color='k', alpha=0.7)
+
+import matplotlib.pyplot as plt
+plt.show()
 
 # Chi-squared test with similar proportions 
 from scipy import stats
