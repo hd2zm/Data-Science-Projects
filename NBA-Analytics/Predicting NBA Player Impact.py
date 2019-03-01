@@ -182,6 +182,18 @@ Kevon_Looney_WINS = 4.91
 Kevon_Looney_USG = 12.5
 Kevon_Looney_PER = 16.61
 
+Paul_George_MPG = 36.7			
+Paul_George_RPM = 8.04
+Paul_George_WINS = 15.65
+Paul_George_USG = 29.7
+Paul_George_PER = 24.57
+
+Kawhi_Leonard_MPG = 34.6			
+Kawhi_Leonard_RPM = 2.75
+Kawhi_Leonard_WINS = 5.83
+Kawhi_Leonard_USG = 29.2
+Kawhi_Leonard_PER = 25.97
+
 print ('Predicted Blake Griffin VA: \n', regressor.predict([[Blake_Griffin_MPG, 
                                                              Blake_Griffin_RPM,
                                                              Blake_Griffin_WINS,
@@ -205,3 +217,15 @@ print ('Predicted Kevon Looney VA: \n', regressor.predict([[Kevon_Looney_MPG,
                                                              Kevon_Looney_WINS,
                                                              Kevon_Looney_USG,
                                                              Kevon_Looney_PER]]))      
+
+print ('Predicted Paul George VA: \n', regressor.predict([[Paul_George_MPG, 
+                                                             Paul_George_RPM,
+                                                             Paul_George_WINS,
+                                                             Paul_George_USG,
+                                                             Paul_George_PER]]))
+
+print ('Predicted Kawhi Leonard VA: \n', regressor.predict([[Kawhi_Leonard_MPG, 
+                                                             Kawhi_Leonard_RPM,
+                                                             Kawhi_Leonard_WINS,
+                                                             Kawhi_Leonard_USG,
+                                                             Kawhi_Leonard_PER]]))

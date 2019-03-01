@@ -95,4 +95,3 @@ if p <= alpha:
 	print('Dependent (reject H0)')
 else:
 	print('Independent (fail to reject H0)')
-    
