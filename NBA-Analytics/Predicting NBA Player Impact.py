@@ -229,3 +229,12 @@ print ('Predicted Kawhi Leonard VA: \n', regressor.predict([[Kawhi_Leonard_MPG,
                                                              Kawhi_Leonard_WINS,
                                                              Kawhi_Leonard_USG,
                                                              Kawhi_Leonard_PER]]))
+    
+    
+metrics_df['VA_Pred'] = metrics_df.apply(lambda metrics_df_record: regressor.predict([[metrics_df_record['MPG'],
+                                          metrics_df_record['RPM'],
+                                          metrics_df_record['WINS'],
+                                          metrics_df_record['USG'],
+                                          metrics_df_record['PER']]]), axis=1)
+metrics_df = metrics_df.sort_values(by=['VA_Pred'], ascending=False)
+print(metrics_df.head(50))
