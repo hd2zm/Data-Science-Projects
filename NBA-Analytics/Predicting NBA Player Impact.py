@@ -155,6 +155,15 @@ model = sm.OLS(y, X_high_correlation).fit()
 predictions = model.predict(X_high_correlation)
 print(model.summary())
 
+#Getting Regression results using stat models
+
+X_high_correlation_two = metrics_df[['MPG','RPM','WINS','USG','PER']]
+import statsmodels.api as sm
+X_high_correlation = sm.add_constant(X_high_correlation_two)
+model = sm.OLS(y, X_high_correlation_two).fit()
+predictions = model.predict(X_high_correlation_two)
+print(model.summary())
+
 
 #Testing data
 
@@ -238,3 +247,9 @@ metrics_df['VA_Pred'] = metrics_df.apply(lambda metrics_df_record: regressor.pre
                                           metrics_df_record['PER']]]), axis=1)
 metrics_df = metrics_df.sort_values(by=['VA_Pred'], ascending=False)
 print(metrics_df.head(50))
+
+
+print(metrics_df.describe())
+
+
+#sns.pairplot(metrics_df[['MPG','RPM','WINS','USG','PER', 'VA']])

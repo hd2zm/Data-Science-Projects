@@ -51,9 +51,29 @@ sns.violinplot(x="PIT Categories", y="Sheltered TH Homeless PIT Ratio", data=pd.
 
 sns.swarmplot(x="PIT Categories", y="Sheltered TH Homeless PIT Ratio", data=pd.melt(ratio_th_pit_df, var_name='PIT Categories', value_name='Sheltered TH Homeless PIT Ratio'), color='k', alpha=0.7)
 
+
 import matplotlib.pyplot as plt
 plt.show()
 
+plt.clf()
+
+sns.kdeplot(ratio_th_pit_df['MK PIT'])
+sns.kdeplot(ratio_th_pit_df['Federal State PIT'])
+sns.kdeplot(ratio_th_pit_df['Federal CoC PIT'])
+
+plt.show()
+
+# Conduct 2 sample t test of means
+from scipy import stats
+
+t, p = stats.ttest_ind(ratio_th_pit_df['MK PIT'].tolist(), ratio_th_pit_df['Federal State PIT'].tolist(), None, False)
+print('MK and Federal State PIT: T-stat=%.3f, p-val=%.3f' % (t, p))
+
+t_2, p_2 = stats.ttest_ind(ratio_th_pit_df['MK PIT'].tolist(), ratio_th_pit_df['Federal CoC PIT'].tolist(), None, False)
+print('MK and Federal CoC PIT: T-stat=%.3f, p-val=%.3f' % (t_2, p_2))
+
+
+'''
 # Chi-squared test with similar proportions 
 from scipy import stats
 
@@ -95,3 +115,4 @@ if p <= alpha:
 	print('Dependent (reject H0)')
 else:
 	print('Independent (fail to reject H0)')
+'''
