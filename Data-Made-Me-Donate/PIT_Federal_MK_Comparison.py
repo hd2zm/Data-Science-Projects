@@ -23,6 +23,8 @@ federal_state_pit_excel_file = pd.ExcelFile('data/' + federal_folder + '/' + fed
 mk_pit_excel_file = pd.ExcelFile('data/' + mk_folder + '/' + mk_pit_file + '.xlsx')
 
 mk_pit_data = pd.read_excel(mk_pit_excel_file, 'Sheet2')
+mk_pit_data = {str(key).replace(' ', ''): val  
+     for key, val in mk_pit_data.items()} 
 
 state_key = 7
 coc_key = 68
@@ -32,14 +34,19 @@ ratio_th_dict = {}
 ratio = lambda subset,total: subset/total 
 
 for mk_key in mk_pit_data.keys():
-	federal_state_pit_data = pd.read_excel(federal_state_pit_excel_file, str(mk_key))
-	federal_coc_pit_data = pd.read_excel(federal_coc_pit_excel_file, str(mk_key))
+    if 'Unnamed' not in str(mk_key):
+    
+        federal_state_pit_data = pd.read_excel(federal_state_pit_excel_file, str(mk_key))
+        federal_coc_pit_data = pd.read_excel(federal_coc_pit_excel_file, str(mk_key))
 	
-	ratio_th_dict[mk_key] = {}
+        ratio_th_dict[mk_key] = {}
 	
-	ratio_th_dict[mk_key]['Federal State PIT'] = ratio(federal_state_pit_data['Sheltered TH Homeless, ' + str(mk_key)][state_key], federal_state_pit_data['Overall Homeless, ' + str(mk_key)][state_key])
-	ratio_th_dict[mk_key]['Federal CoC PIT'] = ratio(federal_coc_pit_data['Sheltered TH Homeless, ' + str(mk_key)][coc_key], federal_coc_pit_data['Overall Homeless, ' + str(mk_key)][coc_key]) 
-	ratio_th_dict[mk_key]['MK PIT'] = ratio(int(float(mk_pit_data[mk_key]['Shelter / Transitional Housing']) * int(mk_pit_data[mk_key]['Surveys Completed'])), int(mk_pit_data[mk_key]['Surveys Completed'])) 
+        ratio_th_dict[mk_key]['Federal State PIT'] = ratio(federal_state_pit_data['Sheltered TH Homeless, ' + str(mk_key)][state_key], federal_state_pit_data['Overall Homeless, ' + str(mk_key)][state_key])
+        ratio_th_dict[mk_key]['Federal CoC PIT'] = ratio(federal_coc_pit_data['Sheltered TH Homeless, ' + str(mk_key)][coc_key], federal_coc_pit_data['Overall Homeless, ' + str(mk_key)][coc_key]) 
+        #ratio_th_dict[mk_key]['MK PIT'] = ratio(int(float(mk_pit_data[str(mk_key)]['Shelter / Transitional Housing']) * int(mk_pit_data[str(mk_key)]['Surveys Completed'])), int(mk_pit_data[str(mk_key)]['Surveys Completed']))
+        ratio_th_dict[mk_key]['MK PIT'] = float(mk_pit_data[str(mk_key)][47]) 
+
+
 
 ratio_th_pit_df = pd.DataFrame(data = ratio_th_dict).T
 
