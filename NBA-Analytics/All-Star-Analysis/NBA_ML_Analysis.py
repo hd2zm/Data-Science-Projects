@@ -38,7 +38,7 @@ print(NBA_MVA_df)
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-sns.pairplot(NBA_MVA_df[['HEIGHT', 'STANDING REACH', 'WEIGHT', 'WINGSPAN', 'VA']])
+sns.pairplot(NBA_MVA_df[['ALL-STAR', 'HEIGHT', 'STANDING REACH', 'WEIGHT', 'WINGSPAN', 'VA']], hue="ALL-STAR")
 
 plt.show()
 plt.clf()
@@ -62,6 +62,11 @@ plt.show()
 plt.clf()
 
 sns.scatterplot(x="WEIGHT", y="VA", hue="ALL-STAR", data=NBA_MVA_df)
+
+plt.show()
+plt.clf()
+
+sns.scatterplot(x="WINGSPAN", y="HEIGHT", hue="ALL-STAR", data=NBA_MVA_df)
 
 plt.show()
 plt.clf()
@@ -157,7 +162,7 @@ pca = PCA(n_components=1)
 principalComponent = pca.fit_transform(X)
 principalDf = pd.DataFrame(data = principalComponent, columns = ['PCA'])
 principalDf = pd.concat([principalDf, NBA_MVA_df.loc[:,['VA', 'ALL-STAR']]], axis=1)
-print(principalDF.head(30))
+print(principalDf.head(30))
 
 
 '''
@@ -166,7 +171,7 @@ Naive Bayes analysis on PCA and VA
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(principalDF[['PCA', 'VA']], principalDf['ALL-STAR'], test_size = 0.25, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(principalDf[['PCA', 'VA']], principalDf['ALL-STAR'], test_size = 0.25, random_state = 0)
 
 # Feature Scaling
 
