@@ -9,6 +9,7 @@ Created on Mon Apr  1 17:32:26 2019
 from sklearn import model_selection, preprocessing, linear_model, naive_bayes, metrics, svm
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn import decomposition, ensemble
+from rake_nltk import Rake
 
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
@@ -37,11 +38,37 @@ def main():
     lyrics_df_2000 = lyrics_df.loc[lyrics_df['Era'] == '2000-2010']
     lyrics_df_1980 = lyrics_df.loc[lyrics_df['Era'] == '1980-2000']
     
+    lyrics_df_2010['Key_Words'] = ""
+    
+    print(lyrics_df_2010.head(10))
+    
+    for index, row in lyrics_df.iterrows():
+        lyric = row['Lyrics']
+        
+        # instantiating Rake, by default is uses english stopwords from NLTK
+        # and discard all puntuation characters
+        r = Rake()
+
+        # extracting the words by passing the text
+        r.extract_keywords_from_text(lyric)
+
+        # getting the dictionary whith key words and their scores
+        key_words_dict_scores = r.get_word_degrees()
+    
+        # assigning the key words to the new column
+        row['Key_Words'] = ' '.join(list(key_words_dict_scores.keys()))
+        lyrics_df.at[index, 'Key_Words'] = row['Key_Words']
+
+
+    lyrics_df.drop(columns = ['Lyrics'], inplace = True)
+    # assigning the key words to the new column
+        
     print(lyrics_df_2010.head(10))
     print(lyrics_df_2000.head(10))
     print(lyrics_df_1980.head(10))
+    print(lyrics_df.head(10))
     
-    
+    '''
     wordcloud = WordCloud(
             width = 1000,
             height = 800,
@@ -52,14 +79,17 @@ def main():
             figsize = (40, 30),
             facecolor = 'k',
             edgecolor = 'k')
+
+    
     
     plt.imshow(wordcloud, interpolation = 'bilinear')
     plt.axis('off')
     plt.tight_layout(pad=0)
     plt.show()
+        '''
     
     # split the dataset into training and validation datasets 
-    train_x, valid_x, train_y, valid_y = model_selection.train_test_split(lyrics_df['Lyrics'], lyrics_df['Era'])
+    train_x, valid_x, train_y, valid_y = model_selection.train_test_split(lyrics_df['Key_Words'], lyrics_df['Era'])
     
     # label encode the target variable 
     encoder = preprocessing.LabelEncoder()
@@ -68,11 +98,11 @@ def main():
 
     # create a count vectorizer object 
     count_vect = CountVectorizer(analyzer='word', stop_words='english', token_pattern=r'\w{1,}')
-    count_vect.fit(lyrics_df['Lyrics'])
+    count_vect.fit(lyrics_df['Key_Words'])
     
     # Transforming our x_train data using our fit cvec.
     # And converting the result to a DataFrame.
-    X_train = pd.DataFrame(count_vect.transform(lyrics_df['Lyrics']).todense(),
+    X_train = pd.DataFrame(count_vect.transform(lyrics_df['Key_Words']).todense(),
                        columns=count_vect.get_feature_names())
     
     # Which words appear the most?
@@ -88,13 +118,13 @@ def main():
     
     # word level tf-idf
     tfidf_vect = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', max_features=5000)
-    tfidf_vect.fit(lyrics_df['Lyrics'])
+    tfidf_vect.fit(lyrics_df['Key_Words'])
     xtrain_tfidf =  tfidf_vect.transform(train_x)
     xvalid_tfidf =  tfidf_vect.transform(valid_x)
     
     # ngram level tf-idf 
     tfidf_vect_ngram = TfidfVectorizer(analyzer='word', token_pattern=r'\w{1,}', ngram_range=(2,3), max_features=5000)
-    tfidf_vect_ngram.fit(lyrics_df['Lyrics'])
+    tfidf_vect_ngram.fit(lyrics_df['Key_Words'])
     xtrain_tfidf_ngram =  tfidf_vect_ngram.transform(train_x)
     xvalid_tfidf_ngram =  tfidf_vect_ngram.transform(valid_x)
 

@@ -10,6 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import re
+from multiprocessing.dummy import Pool as ThreadPool
 
 defaults = {
     'request': {
@@ -33,8 +34,6 @@ def request_song_info(song_title, artist_name):
     headers = {'Authorization': 'Bearer ' + defaults['request']['token']}
     search_url = base_url + '/search'
     data = {'q': song_title + ' ' + artist_name}
-    #data = {'q': artist_name}
-    #data = {'q': song_title}
     response = requests.get(search_url, data=data, headers=headers)
 
     return response
@@ -51,6 +50,8 @@ def scrap_song_url(url):
 def get_lyrics(songs_dict, decade_range):
     
     lyrics = []
+    song_list = []
+    artist_list = []
     remote_song_info = None
     
     print('Parsing lyrics in range ' + decade_range)
@@ -67,12 +68,14 @@ def get_lyrics(songs_dict, decade_range):
             if remote_song_info:
                 song_url = remote_song_info['result']['url']
                 lyrics.append(scrap_song_url(song_url))
+                song_list.append(song)
+                artist_list.append(artist)
             else:
                 print('The lyrics for song ' + song + ' with artist ' + artist + ' were not found')
     print('Completed parsing in range ' + decade_range)
-    return lyrics
+    return pd.DataFrame({'Lyrics': lyrics,'Songs': song_list,'Artists': artist_list,'Era':decade_range})
 
-#List of NBA All Stars
+#List of Songs
 def get_song_data(url):
 
     song_data = {}
@@ -95,70 +98,32 @@ def get_song_data(url):
                     if value not in song_data[key]:
                         song_data[key].append(value)
     
-    #song_df = pd.DataFrame({'2010': song_data})
-    
     return song_data
 
 def main():
-
-
     
     song_data_2010 = get_song_data('https://en.wikipedia.org/wiki/List_of_Billboard_Hot_Rap_Songs_number-one_songs_of_the_2010s')
     song_data_2000 = get_song_data('https://en.wikipedia.org/wiki/List_of_Billboard_number-one_rap_singles_of_the_2000s')
     song_data_1980 = get_song_data('https://en.wikipedia.org/wiki/List_of_Billboard_number-one_rap_singles_of_the_1980s_and_1990s')
     
-    lyrics = get_lyrics(song_data_2010, '2010-2020')
-    lyrics_df = pd.DataFrame(lyrics, columns=['Lyrics'])
-    lyrics_df['Era'] = '2010-2020'
+    song_data = [(song_data_2010, '2010-2020'),
+                 (song_data_2000, '2000-2010'),
+                 (song_data_1980, '1980-2000')]
     
-    temp_lyrics = get_lyrics(song_data_2000, '2000-2010')
-    temp_lyrics_df = pd.DataFrame(temp_lyrics, columns=['Lyrics'])
-    temp_lyrics_df['Era'] = '2000-2010'
     
-    lyrics_df = lyrics_df.append(temp_lyrics_df.copy())
+    pool = ThreadPool(3)
+    results = pool.starmap(get_lyrics, song_data)
+    pool.close()
+    pool.join()
     
-    temp_lyrics = get_lyrics(song_data_1980, '1980-2000')
-    temp_lyrics_df = pd.DataFrame(temp_lyrics, columns=['Lyrics'])
-    temp_lyrics_df['Era'] = '1980-2000'    
+    lyrics_df = pd.DataFrame()
     
-    lyrics_df = lyrics_df.append(temp_lyrics_df.copy())
-    
-    print(lyrics_df)
+    for result in results:
+        lyrics_df = lyrics_df.append(pd.DataFrame(result))
     
     lyrics_df.to_csv('Rap_Lyrics_From_Different_Eras.csv')
-    
-    '''
-    
-    song_data_2000 = get_song_data('https://en.wikipedia.org/wiki/List_of_Billboard_number-one_rap_singles_of_the_2000s')
-   
-    print(song_data_2000)
-    
-    songs_dict = {'Jay-Z': ['Empire State of Mind']}
-    
-
-    
-    songs_dict = {'Jay-Z': ['Empire State of Mind'],
-                  'Eminem': ['Stan', 'Without Me']}
-    
-    songs_dict_two = {'50 Cent': ['21 Questions', 'P.I.M.P.', 'Candy Shop'],
-                      'Kanye West': ['Gold Digger', 'Good Life', 'Heartless']
-                    }
-
-    
-    lyrics = get_lyrics(songs_dict, '2010-2020')
-
-    lyrics_two = get_lyrics(songs_dict_two, '2000-2010')
-    
-    lyrics_df = pd.DataFrame(lyrics, columns=['Lyrics'])
-    lyrics_df['Era'] = '2010-2020'
-    
-    lyrics_df_two = pd.DataFrame(lyrics_two, columns=['Lyrics'])
-    lyrics_df_two['Era'] = '2000-2010'
-    
-    lyrics_df = lyrics_df.append(lyrics_df_two)
-    '''
-    
         
 
 if __name__ == '__main__':
+    
     main()

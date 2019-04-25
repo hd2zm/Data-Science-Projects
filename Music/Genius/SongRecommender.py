@@ -15,20 +15,10 @@ from rake_nltk import Rake
 
 import pandas as pd
 
-
-
-def main():
-
-    
-    lyrics_df = pd.read_csv("Rap_Lyrics_From_Different_Eras.csv")
-    
-    lyrics_df_2010 = lyrics_df.loc[lyrics_df['Era'] == '2010-2020']
-    lyrics_df_2000 = lyrics_df.loc[lyrics_df['Era'] == '2000-2010']
-    lyrics_df_1980 = lyrics_df.loc[lyrics_df['Era'] == '1980-2000']
-    
+def convert_lyrics_to_keywords(lyrics_df):
+     # assigning the key words to the new column
     lyrics_df['Key_Words'] = ""
-    
-    
+      
     for index, row in lyrics_df.iterrows():
         lyric = row['Lyrics']
         
@@ -48,16 +38,6 @@ def main():
 
 
     lyrics_df.drop(columns = ['Lyrics'], inplace = True)
-    # assigning the key words to the new column
-        
-    print(lyrics_df_2010.head(10))
-    print(lyrics_df_2000.head(10))
-    print(lyrics_df_1980.head(10))
-    
-    lyrics_df.set_index('Songs', inplace = True)
-    lyrics_df.drop(columns = ['Unnamed: 0'], inplace = True)
-    
-    print(lyrics_df.head(10))
     
     # merging together hip hop artist names to treat as unique values
     lyrics_df['Artists_Lower'] = lyrics_df['Artists'].map(lambda x: x.split(' '))
@@ -67,29 +47,42 @@ def main():
 
     lyrics_df['Key_Words'] = lyrics_df['Artists_Lower'] + ' ' + lyrics_df['Key_Words']
     lyrics_df.drop(columns = ['Artists_Lower'], inplace = True)
-
-    print(lyrics_df.head(10))
     
+    return lyrics_df
+
+
+def clean_data_frame(lyrics_df):
+    #Remove duplicate values and where songs = artists (errors from parsing)
+    lyrics_df = lyrics_df.drop_duplicates(subset=['Songs', 'Artists'], keep='first')
+    lyrics_df = lyrics_df.drop(lyrics_df[lyrics_df['Songs'] == lyrics_df['Artists']].index)
+    
+    #Reset index to songs
+    lyrics_df.set_index('Songs', inplace = True)
+    lyrics_df.drop(columns = ['Unnamed: 0'], inplace = True) 
+    
+    return lyrics_df
+
+
+def get_cosine_sim_matrix(lyrics_df):
     # instantiating and generating the count matrix
     count = CountVectorizer()
     count_matrix = count.fit_transform(lyrics_df['Key_Words'])
+    
+    # generating the cosine similarity matrix
+    cosine_sim = cosine_similarity(count_matrix, count_matrix) 
+    
+    return cosine_sim
 
+
+def get_recommended_songs(lyrics_df, cosine_sim, song):  
+    recommended_songs = []
+    
     # creating a Series for the song titles so they are associated to an ordered numerical
     indices = pd.DataFrame(lyrics_df.index, lyrics_df['Artists'])
     indices = indices.reset_index()
-    print(indices[:5])
-    
-    # generating the cosine similarity matrix
-    cosine_sim = cosine_similarity(count_matrix, count_matrix)
-    
-    
-    recommended_songs = []
     
     # gettin the index of the song that matches the title
-    idx = indices[indices['Songs'] == 'Headlines'].index[0]
-
-    print(idx)
-
+    idx = indices[indices['Songs'] == song].index[0]
     
     # creating a Series with the similarity scores in descending order
     score_series = pd.Series(cosine_sim[idx]).sort_values(ascending = False)
@@ -100,9 +93,19 @@ def main():
     # populating the list with the titles of the best 10 matching songs
     for i in top_10_indexes:
         recommended_songs.append(list(lyrics_df['Artists'])[i] + ': ' + list(lyrics_df.index)[i] + " " + list(lyrics_df['Era'])[i])
-      
-        
-    print(recommended_songs)
+    
+    return recommended_songs
+
+
+def main():
+
+    lyrics_df = pd.read_csv("Rap_Lyrics_From_Different_Eras.csv")
+    lyrics_df = convert_lyrics_to_keywords(lyrics_df)
+    lyrics_df = clean_data_frame(lyrics_df)
+    cosine_sim_matrix = get_cosine_sim_matrix(lyrics_df)  
+    
+    print(get_recommended_songs(lyrics_df, cosine_sim_matrix, 'Empire State of Mind'))
+    print(get_recommended_songs(lyrics_df, cosine_sim_matrix, 'Hotline Bling'))
     
 if __name__ == '__main__':
     main()
