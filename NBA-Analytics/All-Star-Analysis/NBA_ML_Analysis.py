@@ -74,12 +74,38 @@ plt.clf()
 
 
 '''
+Under Sampling
+'''
+from imblearn.over_sampling import RandomOverSampler
+rus = RandomOverSampler(random_state=0)
+#from imblearn.under_sampling import RandomUnderSampler
+#rus = RandomUnderSampler(random_state=0)
+X_resampled, y_resampled = rus.fit_resample(NBA_MVA_df[['WINGSPAN', 'HEIGHT']], NBA_MVA_df['ALL-STAR'])
+X_resampled = pd.DataFrame(X_resampled)
+y_resampled = pd.DataFrame(y_resampled)
+X_resampled.columns = ['WINGSPAN', 'HEIGHT']
+y_resampled.columns = ['ALL-STAR']
+print(X_resampled.shape)
+print(y_resampled.shape)
+
+NBA_MVA_resampled_df = pd.concat([X_resampled, y_resampled], axis=1)
+
+sns.scatterplot(x="WINGSPAN", y="HEIGHT", hue="ALL-STAR", data=NBA_MVA_resampled_df)
+plt.show()
+plt.clf()
+
+'''
 Random Forest Classifier on Height and Wingspan
 '''
 
+'''
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(NBA_MVA_df[['WINGSPAN', 'HEIGHT']], NBA_MVA_df['ALL-STAR'], test_size = 0.25, random_state = 0)
+'''
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(NBA_MVA_resampled_df[['WINGSPAN', 'HEIGHT']], NBA_MVA_resampled_df['ALL-STAR'], test_size = 0.25, random_state = 0)
 
 
 # Feature Scaling
@@ -88,18 +114,19 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
-'''
+
 # Fitting Decision Tree Classification to the Training set
 from sklearn.tree import DecisionTreeClassifier
 classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
 classifier.fit(X_train, y_train)
+
+
 '''
-
-
 # Fitting Random Forest Classification to the Training set
 from sklearn.ensemble import RandomForestClassifier
 classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
 classifier.fit(X_train, y_train)
+'''
 
 # Predicting the Test set results
 y_pred = classifier.predict(X_test)
@@ -110,7 +137,6 @@ cm = confusion_matrix(y_test, y_pred)
 print(cm)
 
 from sklearn.metrics import precision_recall_fscore_support
-from sklearn.metrics import f1_score
 print(precision_recall_fscore_support(y_test, y_pred, average='weighted'))
 
 # Visualising the Training set results
@@ -125,7 +151,7 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Random Forest Classifier')
+plt.title('Decision Tree Classifier')
 plt.xlabel('Wingspan')
 plt.ylabel('Height')
 plt.legend()
@@ -143,15 +169,16 @@ plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
     plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j)
-plt.title('Random Forest Classifier')
+plt.title('Decision Tree Classifier')
 plt.xlabel('Wingspan')
 plt.ylabel('Height')
 plt.legend()
 plt.show()
 
-#Predict Kawhi Leonard and Draymond Green Measurements
-print(sc.transform([[87, 78],[85.25, 77.75]]))
-print(classifier.predict(sc.transform([[87, 78],[85.25, 77.75]])))
+#Predict Kawhi Leonard, Draymond Green, Jimmer Frederrette, Andrew Wiggins, Stephen Curry, 
+# Giannis Atentokoumpo Measurements
+print(sc.transform([[87, 78],[85.25, 77.75],[76.5,72.75], [84, 80.75], [76,75], [87,83]]))
+print(classifier.predict(sc.transform([[87, 78],[85.25, 77.75],[76.5,72.75], [84, 80.75], [76,75], [87,83]])))
 
 #Predict Ideal Measurements : 6ft 8 inches  height with a 7ft 6 inches wingspan
 print(sc.transform([[90,80]]))
