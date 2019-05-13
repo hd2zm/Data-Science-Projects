@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  songrec:
+    build: ./recommender 
+    volumes:
+      - data:/data
+    ports:
+      - "8000:8000"
+  
+  webapp:
+    build: ./api
+    depends_on: 
+      - songrec
+    volumes:
+      - data:/data
+    ports:
+      - "5000:5000"
+
+volumes:
+  data: 
+    driver: local
