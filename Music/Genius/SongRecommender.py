@@ -12,6 +12,7 @@ SEE FOR REFERENCE: https://github.com/emmagrimaldi/Content_based_movie_recommend
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from rake_nltk import Rake
+from sklearn.externals import joblib
 
 import pandas as pd
 
@@ -96,13 +97,15 @@ def get_recommended_songs(lyrics_df, cosine_sim, song):
     
     return recommended_songs
 
-
 def main():
 
     lyrics_df = pd.read_csv("Rap_Lyrics_From_Different_Eras.csv")
     lyrics_df = convert_lyrics_to_keywords(lyrics_df)
     lyrics_df = clean_data_frame(lyrics_df)
-    cosine_sim_matrix = get_cosine_sim_matrix(lyrics_df)  
+    cosine_sim_matrix = get_cosine_sim_matrix(lyrics_df)
+    
+    joblib.dump(lyrics_df, 'lyrics.pkl')
+    joblib.dump(cosine_sim_matrix, 'csm.pkl')
     
     print(get_recommended_songs(lyrics_df, cosine_sim_matrix, 'Empire State of Mind'))
     print(get_recommended_songs(lyrics_df, cosine_sim_matrix, 'Hotline Bling'))
