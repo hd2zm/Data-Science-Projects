@@ -1,14 +1,17 @@
 #start with 3.7.2 version of python
 FROM python:3.7.2
 
-MAINTAINER Hari Devanathan <hd2zm@tailordev.fr>
-
 #ENV PYTHONUNBUFFERED 1
+
+
+RUN mkdir -p "/var/lib/docker/volumes/genius_copy_data/_data"
+
+VOLUME [ "/var/lib/docker/volumes/genius_copy_data/_data" ]
 
 COPY SongRecommender.py SongRecommender.py
 COPY Rap_Lyrics_From_Different_Eras.csv Rap_Lyrics_From_Different_Eras.csv
-
-VOLUME [ "/data" ]
+COPY lyrics.pkl lyrics.pkl
+COPY csm.pkl csm.pkl
 
 #update packages instlaled in the os
 RUN apt-get update && \
@@ -36,6 +39,3 @@ EXPOSE 8000
 #Run script
 CMD ["./SongRecommender.py"]
 
-#After running script, load data into volume storage
-#COPY lyrics.pkl /data/lyrics.pkl
-#COPY ./csm.pkl /data/csm.pkl
