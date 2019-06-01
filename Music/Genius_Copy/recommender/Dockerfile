@@ -3,15 +3,18 @@ FROM python:3.7.2
 
 #ENV PYTHONUNBUFFERED 1
 
-
-RUN mkdir -p "/var/lib/docker/volumes/genius_copy_data/_data"
-
-VOLUME [ "/var/lib/docker/volumes/genius_copy_data/_data" ]
+# Create directory for volume
+RUN mkdir -p "genius_copy_data/"
 
 COPY SongRecommender.py SongRecommender.py
 COPY Rap_Lyrics_From_Different_Eras.csv Rap_Lyrics_From_Different_Eras.csv
-COPY lyrics.pkl lyrics.pkl
-COPY csm.pkl csm.pkl
+
+# Copy over the serialized objects into the genius_copy_data directory that will be mounted as a volume
+COPY lyrics.pkl genius_copy_data/lyrics.pkl
+COPY csm.pkl genius_copy_data/csm.pkl
+
+# Mount the directory as a volume
+VOLUME [ "genius_copy_data/" ]
 
 #update packages instlaled in the os
 RUN apt-get update && \
@@ -37,5 +40,5 @@ RUN chmod a+x *.py
 EXPOSE 8000
 
 #Run script
-CMD ["./SongRecommender.py"]
+CMD ["sh","-c","./SongRecommender.py && tail -f /dev/null"]
 
