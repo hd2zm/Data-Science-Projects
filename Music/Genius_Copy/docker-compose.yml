@@ -10,9 +10,9 @@ services:
     depends_on: 
       - songrec
     volumes:
-      - genius_copy_data:/data
+      - data
     ports:
       - "5000:5000"
 
 volumes:
-  data:
+  data: genius_copy_data:/data
