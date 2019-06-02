@@ -10,9 +10,6 @@ services:
     depends_on: 
       - songrec
     volumes:
-      - data:/data
+      - ./volume:/data
     ports:
       - "5000:5000"
-
-volumes:
-  data: 
