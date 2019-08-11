@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Which Musical Genre?</title>
+  <style>
+  body{
+    font-family: sans-serif;
+  }
+  .button {
+    background-color: rgb(80, 188, 224);
+    border: none;
+    color: Black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .animal-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #eee;
+    width: 300px;
+    margin: auto;
+  }
+  </style>
+
+</head>
+
+<body align="center">
+
+  <h2>Enter in a song and I'll tell you if it is Electronic, Hip-Hop, or Rock</h2>
+
+  <form action="/predict_genre_song/" method="post">
+    <div class="animal-card" align="center">
+      Artist:
+      <br>
+        <input type="text" name="artist">
+      <br>
+      Song:
+      <br>
+        <input type="text" name="song">
+      <br>
+    </div>
+    <button type="submit" class="button">
+      Get Song Info
+    </button>
+  </form>
+
+  <br>
+
+  {% if message %}
+  <h2>{{message}}</h2>
+  {% endif %}
+
+</body>
+</html>
