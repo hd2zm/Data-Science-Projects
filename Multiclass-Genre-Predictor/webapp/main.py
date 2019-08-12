@@ -33,13 +33,11 @@ def load_model():
 
     # download model from aws bucket if it doesn't exist in local path
     if not os.path.isfile(MODEL_LOCAL_PATH):
-
-        AWS_ACCESS_KEY_ID = 'AKIAJNCGPD6VW6G6Q47A'
-        AWS_SECRET_ACCESS_KEY = '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'
+        
         REGION_HOST = 's3.us-east-2.amazonaws.com'
         BUCKET_NAME = 'music-genre-recommender-model'
 
-        conn = S3Connection(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, host=REGION_HOST)
+        conn = S3Connection(settings.AWS_ACCESS_KEY_ID, settings.AWS_SECRET_ACCESS_KEY, host=REGION_HOST)
         bucket = conn.get_bucket(BUCKET_NAME)
 
         key_obj = Key(bucket)
