@@ -8,6 +8,7 @@ This is a list of data science projects I completed on my own, as part of hackat
 ## Metis
 * Used-Car-Predictions
 * Multiclass-Genre-Predictor
+* Amazon-Book-Reviews
 
 ## Personal Projects
 * Music
