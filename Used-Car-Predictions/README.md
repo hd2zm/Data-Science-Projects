@@ -30,7 +30,7 @@ Run linear regression models, lasso regression, and ridge regression. See which 
 
 ## Conclusions 
 
-Was able to build a linear regression model with an $R^2$ of 0.87 and an RMSE of $3,465.88. So whatever price my model predicts, it will be off by $3,465.88. 
+Was able to build a linear regression model with an R^2 of 0.87 and an RMSE of $3,465.88. So whatever price my model predicts, it will be off by $3,465.88. 
 
 
 
