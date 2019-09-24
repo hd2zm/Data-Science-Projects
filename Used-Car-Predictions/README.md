@@ -14,7 +14,7 @@ Removed duplicates and outliers (car price > $53,000 was removed). Also converte
 
 ### Feature Engineering
 
-Look at correlations and pairplots. Derived new features (dummy variables on make of car, Certified x Luxury, Age x Miles). 
+Reviewed correlations and pairplots. Derived new features (dummy variables on make of car, Certified x Luxury, Age x Miles), and removed features that were correlated with other features. 
 
 ### Modeling
 
