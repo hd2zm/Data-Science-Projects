@@ -10,6 +10,7 @@ This is a list of data science projects I completed on my own, as part of hackat
 * Used-Car-Predictions
 * Multiclass-Genre-Predictor
 * Amazon-Book-Reviews
+* Analyzing-Stocks
 
 ## Personal Projects
 * Music
