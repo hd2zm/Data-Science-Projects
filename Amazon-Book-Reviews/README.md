@@ -1,6 +1,8 @@
 # Clustering Amazon Book Reviews from 2005
 
-This project filters out book reviews by 
+All code is found in Amazon-Book-Reviews.ipynb.
+
+This project filters out Amazon book reviews by 
 * year (2005)
 * rating (3 stars are excluded)
 * helpfulness (least helpful are excluded)
