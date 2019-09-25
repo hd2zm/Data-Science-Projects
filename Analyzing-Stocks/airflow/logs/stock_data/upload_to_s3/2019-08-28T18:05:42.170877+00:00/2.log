@@ -1,0 +1,50 @@
+[2019-08-28 13:08:09,850] {taskinstance.py:616} INFO - Dependencies all met for <TaskInstance: stock_data.upload_to_s3 2019-08-28T18:05:42.170877+00:00 [queued]>
+[2019-08-28 13:08:09,856] {taskinstance.py:616} INFO - Dependencies all met for <TaskInstance: stock_data.upload_to_s3 2019-08-28T18:05:42.170877+00:00 [queued]>
+[2019-08-28 13:08:09,857] {taskinstance.py:834} INFO - 
+--------------------------------------------------------------------------------
+[2019-08-28 13:08:09,857] {taskinstance.py:835} INFO - Starting attempt 2 of 2
+[2019-08-28 13:08:09,857] {taskinstance.py:836} INFO - 
+--------------------------------------------------------------------------------
+[2019-08-28 13:08:09,869] {taskinstance.py:855} INFO - Executing <Task(PythonOperator): upload_to_s3> on 2019-08-28T18:05:42.170877+00:00
+[2019-08-28 13:08:09,869] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'stock_data', 'upload_to_s3', '2019-08-28T18:05:42.170877+00:00', '--job_id', '15', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/hello_world_dag.py', '--cfg_path', '/var/folders/z6/sk1b92g1385cmsp5qvg672kr0000gn/T/tmp3xeb13c7']
+[2019-08-28 13:08:10,626] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3 [2019-08-28 13:08:10,625] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-08-28 13:08:10,977] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3 [2019-08-28 13:08:10,976] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-08-28 13:08:16,264] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3 [2019-08-28 13:08:16,264] {cli.py:516} INFO - Running <TaskInstance: stock_data.upload_to_s3 2019-08-28T18:05:42.170877+00:00 [running]> on host Haris-MacBook-Pro.local
+[2019-08-28 13:08:21,278] {python_operator.py:105} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=stock_data
+AIRFLOW_CTX_TASK_ID=upload_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2019-08-28T18:05:42.170877+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-08-28T18:05:42.170877+00:00
+[2019-08-28 13:08:21,285] {taskinstance.py:1047} ERROR - name 'amzn_df' is not defined
+Traceback (most recent call last):
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 922, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 113, in execute
+    return_value = self.execute_callable()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 118, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/hdeva/airflow/dags/hello_world_dag.py", line 45, in upload_to_s3
+    amzn_df.to_csv(csv_buffer, index=False)
+NameError: name 'amzn_df' is not defined
+[2019-08-28 13:08:21,287] {taskinstance.py:1076} INFO - All retries failed; marking task as FAILED
+[2019-08-28 13:08:21,298] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3 Traceback (most recent call last):
+[2019-08-28 13:08:21,298] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/bin/airflow", line 32, in <module>
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     args.func(args)
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     return f(*args, **kwargs)
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/bin/cli.py", line 522, in run
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     _run(args, dag, ti)
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/bin/cli.py", line 440, in _run
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     pool=args.pool,
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     return func(*args, **kwargs)
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 922, in _run_raw_task
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     result = task_copy.execute(context=context)
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 113, in execute
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     return_value = self.execute_callable()
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 118, in execute_callable
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     return self.python_callable(*self.op_args, **self.op_kwargs)
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3   File "/Users/hdeva/airflow/dags/hello_world_dag.py", line 45, in upload_to_s3
+[2019-08-28 13:08:21,299] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3     amzn_df.to_csv(csv_buffer, index=False)
+[2019-08-28 13:08:21,300] {base_task_runner.py:115} INFO - Job 15: Subtask upload_to_s3 NameError: name 'amzn_df' is not defined
+[2019-08-28 13:08:24,922] {logging_mixin.py:95} INFO - [[34m2019-08-28 13:08:24,920[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 1[0m

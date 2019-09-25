@@ -1,0 +1,455 @@
+[2019-09-01 18:40:43,154] {scheduler_job.py:146} INFO - Started process (PID=14049) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:48,161] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:40:48,162] {logging_mixin.py:95} INFO - [2019-09-01 18:40:48,162] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:48,522] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:48,539] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:40:48,548] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:40:48,554] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.401 seconds
+[2019-09-01 18:40:48,618] {scheduler_job.py:146} INFO - Started process (PID=14050) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:53,627] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:40:53,628] {logging_mixin.py:95} INFO - [2019-09-01 18:40:53,627] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:53,975] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:53,999] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:40:54,008] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:40:54,014] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.395 seconds
+[2019-09-01 18:40:54,064] {scheduler_job.py:146} INFO - Started process (PID=14054) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:59,071] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:40:59,072] {logging_mixin.py:95} INFO - [2019-09-01 18:40:59,072] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:59,456] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:40:59,478] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:40:59,490] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:40:59,497] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.432 seconds
+[2019-09-01 18:40:59,518] {scheduler_job.py:146} INFO - Started process (PID=14055) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:04,527] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:04,529] {logging_mixin.py:95} INFO - [2019-09-01 18:41:04,528] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:04,897] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:04,919] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:04,928] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:04,933] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.416 seconds
+[2019-09-01 18:41:04,971] {scheduler_job.py:146} INFO - Started process (PID=14056) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:09,977] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:09,978] {logging_mixin.py:95} INFO - [2019-09-01 18:41:09,977] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:10,341] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:10,364] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:10,373] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:10,378] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.408 seconds
+[2019-09-01 18:41:10,414] {scheduler_job.py:146} INFO - Started process (PID=14059) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:15,427] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:15,428] {logging_mixin.py:95} INFO - [2019-09-01 18:41:15,428] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:15,779] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:15,802] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:15,811] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:15,842] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:15,845] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.start 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:41:15,855] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.441 seconds
+[2019-09-01 18:41:15,875] {scheduler_job.py:146} INFO - Started process (PID=14060) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:20,885] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:20,886] {logging_mixin.py:95} INFO - [2019-09-01 18:41:20,886] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:21,266] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:21,284] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:21,294] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:21,327] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:21,332] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.457 seconds
+[2019-09-01 18:41:21,432] {scheduler_job.py:146} INFO - Started process (PID=14063) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:26,443] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:26,444] {logging_mixin.py:95} INFO - [2019-09-01 18:41:26,444] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:26,845] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:26,862] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:26,875] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:26,915] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:26,921] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.488 seconds
+[2019-09-01 18:41:26,993] {scheduler_job.py:146} INFO - Started process (PID=14064) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:32,000] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:32,001] {logging_mixin.py:95} INFO - [2019-09-01 18:41:32,000] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:32,350] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:32,372] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:32,381] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:32,415] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:32,420] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.427 seconds
+[2019-09-01 18:41:32,458] {scheduler_job.py:146} INFO - Started process (PID=14065) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:37,469] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:37,470] {logging_mixin.py:95} INFO - [2019-09-01 18:41:37,470] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:37,823] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:37,843] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:37,852] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:37,885] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:37,890] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.432 seconds
+[2019-09-01 18:41:37,909] {scheduler_job.py:146} INFO - Started process (PID=14068) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:42,916] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:42,917] {logging_mixin.py:95} INFO - [2019-09-01 18:41:42,916] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:43,263] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:43,286] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:43,295] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:43,327] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:43,331] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.422 seconds
+[2019-09-01 18:41:43,374] {scheduler_job.py:146} INFO - Started process (PID=14070) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:48,381] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:48,382] {logging_mixin.py:95} INFO - [2019-09-01 18:41:48,381] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:48,728] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:48,751] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:48,759] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:48,794] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:48,797] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.get_amzn_stock_data 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:41:48,800] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.get_msft_stock_data 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:41:48,802] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.get_fb_stock_data 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:41:48,804] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.get_aapl_stock_data 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:41:48,807] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.get_googl_stock_data 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:41:48,817] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.443 seconds
+[2019-09-01 18:41:48,837] {scheduler_job.py:146} INFO - Started process (PID=14071) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:53,844] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:53,845] {logging_mixin.py:95} INFO - [2019-09-01 18:41:53,845] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:54,201] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:54,225] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:54,234] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:54,258] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:54,263] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.426 seconds
+[2019-09-01 18:41:54,292] {scheduler_job.py:146} INFO - Started process (PID=14075) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:59,301] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:41:59,302] {logging_mixin.py:95} INFO - [2019-09-01 18:41:59,302] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:59,649] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:41:59,672] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:41:59,681] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:41:59,705] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:41:59,710] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.418 seconds
+[2019-09-01 18:41:59,748] {scheduler_job.py:146} INFO - Started process (PID=14076) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:04,753] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:42:04,754] {logging_mixin.py:95} INFO - [2019-09-01 18:42:04,753] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:05,146] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:05,168] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:42:05,177] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:42:05,206] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:42:05,211] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.463 seconds
+[2019-09-01 18:42:05,301] {scheduler_job.py:146} INFO - Started process (PID=14077) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:10,307] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:42:10,308] {logging_mixin.py:95} INFO - [2019-09-01 18:42:10,308] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:10,686] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:10,706] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:42:10,715] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:42:10,741] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:42:10,746] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.445 seconds
+[2019-09-01 18:42:10,847] {scheduler_job.py:146} INFO - Started process (PID=14081) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:15,854] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:42:15,854] {logging_mixin.py:95} INFO - [2019-09-01 18:42:15,854] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:16,201] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:16,225] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:42:16,234] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:42:16,259] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:42:16,264] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.418 seconds
+[2019-09-01 18:42:16,307] {scheduler_job.py:146} INFO - Started process (PID=14082) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:21,315] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:42:21,316] {logging_mixin.py:95} INFO - [2019-09-01 18:42:21,316] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:21,667] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:21,691] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:42:21,700] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:42:21,724] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:42:21,727] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.upload_amzn_to_s3 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:42:21,737] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.431 seconds
+[2019-09-01 18:42:21,771] {scheduler_job.py:146} INFO - Started process (PID=14084) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:26,779] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:42:26,780] {logging_mixin.py:95} INFO - [2019-09-01 18:42:26,780] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:27,124] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:42:27,148] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:42:27,157] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:42:27,180] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:42:27,184] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.414 seconds
+[2019-09-01 18:44:30,764] {scheduler_job.py:146} INFO - Started process (PID=14110) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:44:35,771] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:44:35,772] {logging_mixin.py:95} INFO - [2019-09-01 18:44:35,771] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:44:36,128] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:44:36,150] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:44:36,160] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:44:36,183] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:44:36,186] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.upload_msft_to_s3 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:44:36,189] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.upload_fb_to_s3 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:44:36,191] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.upload_aapl_to_s3 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:44:36,193] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.upload_googl_to_s3 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:44:36,203] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.439 seconds
+[2019-09-01 18:45:03,845] {scheduler_job.py:146} INFO - Started process (PID=14119) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:45:08,852] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:45:08,854] {logging_mixin.py:95} INFO - [2019-09-01 18:45:08,853] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:45:09,269] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:45:09,290] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:45:09,301] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:45:09,319] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:45:09,324] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.479 seconds
+[2019-09-01 18:47:12,875] {scheduler_job.py:146} INFO - Started process (PID=14151) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:17,881] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:47:17,882] {logging_mixin.py:95} INFO - [2019-09-01 18:47:17,881] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:18,268] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:18,291] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:47:18,301] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:47:18,320] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:47:18,324] {scheduler_job.py:1569} INFO - Creating / updating <TaskInstance: stock_data.end 2019-09-01 23:41:11.504322+00:00 [scheduled]> in ORM
+[2019-09-01 18:47:18,335] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.461 seconds
+[2019-09-01 18:47:18,427] {scheduler_job.py:146} INFO - Started process (PID=14152) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:23,434] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:47:23,436] {logging_mixin.py:95} INFO - [2019-09-01 18:47:23,435] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:23,824] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:23,850] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:47:23,860] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:47:23,872] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:47:23,877] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.450 seconds
+[2019-09-01 18:47:23,977] {scheduler_job.py:146} INFO - Started process (PID=14156) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:28,987] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:47:28,988] {logging_mixin.py:95} INFO - [2019-09-01 18:47:28,987] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:29,375] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:29,401] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:47:29,412] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:47:29,427] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:47:29,433] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.456 seconds
+[2019-09-01 18:47:29,532] {scheduler_job.py:146} INFO - Started process (PID=14158) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:34,536] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:47:34,537] {logging_mixin.py:95} INFO - [2019-09-01 18:47:34,537] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:34,930] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:34,949] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:47:34,958] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:47:34,970] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:47:34,975] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.443 seconds
+[2019-09-01 18:47:51,895] {scheduler_job.py:146} INFO - Started process (PID=14162) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:56,902] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:47:56,903] {logging_mixin.py:95} INFO - [2019-09-01 18:47:56,903] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:57,396] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:47:57,412] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:47:57,426] {scheduler_job.py:711} INFO - Examining DAG run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True>
+[2019-09-01 18:47:57,434] {logging_mixin.py:95} INFO - [2019-09-01 18:47:57,433] {dagrun.py:316} INFO - Marking run <DagRun stock_data @ 2019-09-01 23:41:11.504322+00:00: manual__2019-09-01T23:41:11.504322+00:00, externally triggered: True> successful
+[2019-09-01 18:47:57,436] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:47:57,442] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.547 seconds
+[2019-09-01 18:47:57,551] {scheduler_job.py:146} INFO - Started process (PID=14165) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:02,557] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:02,558] {logging_mixin.py:95} INFO - [2019-09-01 18:48:02,558] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:02,946] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:02,969] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:02,980] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:02,986] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.435 seconds
+[2019-09-01 18:48:03,095] {scheduler_job.py:146} INFO - Started process (PID=14166) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:08,108] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:08,109] {logging_mixin.py:95} INFO - [2019-09-01 18:48:08,108] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:08,489] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:08,510] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:08,520] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:08,526] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.431 seconds
+[2019-09-01 18:48:08,547] {scheduler_job.py:146} INFO - Started process (PID=14168) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:13,553] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:13,554] {logging_mixin.py:95} INFO - [2019-09-01 18:48:13,553] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:13,932] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:13,956] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:13,967] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:13,973] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.425 seconds
+[2019-09-01 18:48:13,995] {scheduler_job.py:146} INFO - Started process (PID=14169) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:19,003] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:19,004] {logging_mixin.py:95} INFO - [2019-09-01 18:48:19,004] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:19,391] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:19,415] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:19,430] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:19,438] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.443 seconds
+[2019-09-01 18:48:19,539] {scheduler_job.py:146} INFO - Started process (PID=14170) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:24,546] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:24,547] {logging_mixin.py:95} INFO - [2019-09-01 18:48:24,547] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:24,924] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:24,949] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:24,958] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:24,963] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.424 seconds
+[2019-09-01 18:48:24,989] {scheduler_job.py:146} INFO - Started process (PID=14172) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:29,996] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:29,997] {logging_mixin.py:95} INFO - [2019-09-01 18:48:29,997] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:30,366] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:30,388] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:30,398] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:30,404] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.415 seconds
+[2019-09-01 18:48:30,435] {scheduler_job.py:146} INFO - Started process (PID=14174) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:35,441] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:35,442] {logging_mixin.py:95} INFO - [2019-09-01 18:48:35,442] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:35,813] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:35,837] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:35,846] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:35,851] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.416 seconds
+[2019-09-01 18:48:35,886] {scheduler_job.py:146} INFO - Started process (PID=14175) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:40,894] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:40,896] {logging_mixin.py:95} INFO - [2019-09-01 18:48:40,895] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:41,272] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:41,297] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:41,306] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:41,311] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.425 seconds
+[2019-09-01 18:48:41,343] {scheduler_job.py:146} INFO - Started process (PID=14177) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:46,347] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:46,348] {logging_mixin.py:95} INFO - [2019-09-01 18:48:46,348] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:46,732] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:46,755] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:46,766] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:46,772] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.430 seconds
+[2019-09-01 18:48:46,800] {scheduler_job.py:146} INFO - Started process (PID=14178) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:51,805] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:51,806] {logging_mixin.py:95} INFO - [2019-09-01 18:48:51,806] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:52,192] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:52,214] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:52,224] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:52,230] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.430 seconds
+[2019-09-01 18:48:52,251] {scheduler_job.py:146} INFO - Started process (PID=14180) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:57,258] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:48:57,259] {logging_mixin.py:95} INFO - [2019-09-01 18:48:57,259] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:57,647] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:48:57,669] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:48:57,680] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:48:57,686] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.435 seconds
+[2019-09-01 18:48:57,708] {scheduler_job.py:146} INFO - Started process (PID=14182) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:02,716] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:02,717] {logging_mixin.py:95} INFO - [2019-09-01 18:49:02,717] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:03,090] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:03,114] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:03,125] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:03,131] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.423 seconds
+[2019-09-01 18:49:03,157] {scheduler_job.py:146} INFO - Started process (PID=14184) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:08,163] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:08,164] {logging_mixin.py:95} INFO - [2019-09-01 18:49:08,164] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:08,537] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:08,562] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:08,571] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:08,577] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.420 seconds
+[2019-09-01 18:49:08,607] {scheduler_job.py:146} INFO - Started process (PID=14186) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:13,613] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:13,614] {logging_mixin.py:95} INFO - [2019-09-01 18:49:13,613] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:13,983] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:14,004] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:14,014] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:14,019] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.413 seconds
+[2019-09-01 18:49:14,057] {scheduler_job.py:146} INFO - Started process (PID=14187) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:19,062] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:19,063] {logging_mixin.py:95} INFO - [2019-09-01 18:49:19,063] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:19,442] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:19,465] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:19,475] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:19,482] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.426 seconds
+[2019-09-01 18:49:19,503] {scheduler_job.py:146} INFO - Started process (PID=14188) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:24,512] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:24,513] {logging_mixin.py:95} INFO - [2019-09-01 18:49:24,513] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:24,899] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:24,918] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:24,929] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:24,934] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.431 seconds
+[2019-09-01 18:49:24,957] {scheduler_job.py:146} INFO - Started process (PID=14190) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:29,962] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:29,963] {logging_mixin.py:95} INFO - [2019-09-01 18:49:29,963] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:30,357] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:30,382] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:30,391] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:30,397] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.440 seconds
+[2019-09-01 18:49:30,511] {scheduler_job.py:146} INFO - Started process (PID=14191) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:35,518] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:35,519] {logging_mixin.py:95} INFO - [2019-09-01 18:49:35,519] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:35,869] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:35,892] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:35,901] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:35,906] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.395 seconds
+[2019-09-01 18:49:35,954] {scheduler_job.py:146} INFO - Started process (PID=14193) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:40,963] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:40,964] {logging_mixin.py:95} INFO - [2019-09-01 18:49:40,964] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:41,322] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:41,346] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:41,355] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:41,360] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.407 seconds
+[2019-09-01 18:49:41,416] {scheduler_job.py:146} INFO - Started process (PID=14195) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:46,422] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:46,423] {logging_mixin.py:95} INFO - [2019-09-01 18:49:46,423] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:46,804] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:46,828] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:46,838] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:46,845] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.429 seconds
+[2019-09-01 18:49:46,869] {scheduler_job.py:146} INFO - Started process (PID=14196) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:51,877] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:51,878] {logging_mixin.py:95} INFO - [2019-09-01 18:49:51,878] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:52,239] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:52,262] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:52,271] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:52,276] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.407 seconds
+[2019-09-01 18:49:52,321] {scheduler_job.py:146} INFO - Started process (PID=14198) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:57,326] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:49:57,327] {logging_mixin.py:95} INFO - [2019-09-01 18:49:57,327] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:57,691] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:49:57,716] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:49:57,725] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:49:57,731] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.410 seconds
+[2019-09-01 18:49:57,772] {scheduler_job.py:146} INFO - Started process (PID=14200) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:02,777] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:02,778] {logging_mixin.py:95} INFO - [2019-09-01 18:50:02,778] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:03,165] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:03,186] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:03,195] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:03,200] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.428 seconds
+[2019-09-01 18:50:03,219] {scheduler_job.py:146} INFO - Started process (PID=14202) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:08,224] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:08,225] {logging_mixin.py:95} INFO - [2019-09-01 18:50:08,225] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:08,639] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:08,665] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:08,676] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:08,682] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.463 seconds
+[2019-09-01 18:50:08,775] {scheduler_job.py:146} INFO - Started process (PID=14204) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:13,784] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:13,785] {logging_mixin.py:95} INFO - [2019-09-01 18:50:13,785] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:14,147] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:14,169] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:14,179] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:14,184] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.410 seconds
+[2019-09-01 18:50:14,221] {scheduler_job.py:146} INFO - Started process (PID=14205) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:19,228] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:19,229] {logging_mixin.py:95} INFO - [2019-09-01 18:50:19,229] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:19,596] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:19,618] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:19,627] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:19,633] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.412 seconds
+[2019-09-01 18:50:19,679] {scheduler_job.py:146} INFO - Started process (PID=14206) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:24,685] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:24,686] {logging_mixin.py:95} INFO - [2019-09-01 18:50:24,686] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:25,048] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:25,069] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:25,078] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:25,084] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.404 seconds
+[2019-09-01 18:50:25,132] {scheduler_job.py:146} INFO - Started process (PID=14208) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:30,138] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:30,139] {logging_mixin.py:95} INFO - [2019-09-01 18:50:30,139] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:30,513] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:30,536] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:30,546] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:30,552] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.420 seconds
+[2019-09-01 18:50:30,588] {scheduler_job.py:146} INFO - Started process (PID=14209) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:35,595] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:35,596] {logging_mixin.py:95} INFO - [2019-09-01 18:50:35,595] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:35,978] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:36,001] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:36,012] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:36,019] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.430 seconds
+[2019-09-01 18:50:36,041] {scheduler_job.py:146} INFO - Started process (PID=14211) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:41,047] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:41,048] {logging_mixin.py:95} INFO - [2019-09-01 18:50:41,048] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:41,435] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:41,452] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:41,462] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:41,469] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.428 seconds
+[2019-09-01 18:50:41,496] {scheduler_job.py:146} INFO - Started process (PID=14214) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:46,507] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:46,508] {logging_mixin.py:95} INFO - [2019-09-01 18:50:46,508] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:46,870] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:46,893] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:46,903] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:46,908] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.412 seconds
+[2019-09-01 18:50:46,945] {scheduler_job.py:146} INFO - Started process (PID=14215) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:51,955] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:51,956] {logging_mixin.py:95} INFO - [2019-09-01 18:50:51,956] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:52,318] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:52,343] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:52,352] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:52,357] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.412 seconds
+[2019-09-01 18:50:52,400] {scheduler_job.py:146} INFO - Started process (PID=14217) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:57,405] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:50:57,406] {logging_mixin.py:95} INFO - [2019-09-01 18:50:57,406] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:57,768] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:50:57,789] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:50:57,798] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:50:57,804] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.403 seconds
+[2019-09-01 18:50:57,851] {scheduler_job.py:146} INFO - Started process (PID=14219) to work on /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:51:02,860] {scheduler_job.py:1493} INFO - Processing file /Users/hdeva/airflow/dags/hello_world_dag.py for tasks to queue
+[2019-09-01 18:51:02,861] {logging_mixin.py:95} INFO - [2019-09-01 18:51:02,860] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:51:03,290] {scheduler_job.py:1505} INFO - DAG(s) dict_keys(['stock_data']) retrieved from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-01 18:51:03,308] {scheduler_job.py:1228} INFO - Processing stock_data
+[2019-09-01 18:51:03,317] {scheduler_job.py:413} INFO - Skipping SLA check for <DAG: stock_data> because no tasks in DAG have SLAs
+[2019-09-01 18:51:03,323] {scheduler_job.py:152} INFO - Processing /Users/hdeva/airflow/dags/hello_world_dag.py took 5.471 seconds
+[2019-09-01 18:51:03,404] {scheduler_job.py:146} INFO - Started process (PID=14220) to work on /Users/hdeva/airflow/dags/hello_world_dag.py

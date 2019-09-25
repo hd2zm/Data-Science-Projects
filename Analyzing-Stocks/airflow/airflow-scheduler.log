@@ -1,0 +1,509 @@
+2019-09-12 13:32:17,928 INFO - Starting the scheduler
+2019-09-12 13:32:17,929 INFO - Running execute loop for -1 seconds
+2019-09-12 13:32:17,931 INFO - Processing each file at most -1 times
+2019-09-12 13:32:17,932 INFO - Searching for files in [1m/Users/hdeva/airflow/dags[0m
+2019-09-12 13:32:17,936 INFO - There are 1 files in [1m/Users/hdeva/airflow/dags[0m
+2019-09-12 13:32:17,937 INFO - Resetting orphaned tasks for active dag runs
+2019-09-12 13:32:17,949 INFO - Launched DagFileProcessorManager with pid: 27327
+2019-09-12 13:32:17,956 INFO - Configured default timezone <Timezone [UTC]>
+2019-09-12 17:22:43,957 INFO - 1 tasks up for execution:
+	[1m<TaskInstance: stock_data.start 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:22:43,966 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued
+2019-09-12 17:22:43,967 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-12 17:22:43,974 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.start 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:22:43,980 INFO - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: stock_data.start 2019-09-12 22:22:39.316294+00:00 [queued]>[0m
+2019-09-12 17:22:43,981 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-12 17:22:43,981 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:22:43,983 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:23:16,982 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:23:18,022 INFO - 5 tasks up for execution:
+	[1m<TaskInstance: stock_data.get_amzn_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:23:18,028 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 5 task instances ready to be queued
+2019-09-12 17:23:18,028 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-12 17:23:18,029 INFO - DAG [1mstock_data[0m has 1/16 running and queued tasks
+2019-09-12 17:23:18,030 INFO - DAG [1mstock_data[0m has 2/16 running and queued tasks
+2019-09-12 17:23:18,031 INFO - DAG [1mstock_data[0m has 3/16 running and queued tasks
+2019-09-12 17:23:18,031 INFO - DAG [1mstock_data[0m has 4/16 running and queued tasks
+2019-09-12 17:23:18,039 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.get_amzn_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:23:18,051 INFO - Setting the following 5 tasks to queued state:
+	[1m<TaskInstance: stock_data.get_amzn_stock_data 2019-09-12 22:22:39.316294+00:00 [queued]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-09-12 22:22:39.316294+00:00 [queued]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-09-12 22:22:39.316294+00:00 [queued]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-09-12 22:22:39.316294+00:00 [queued]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-09-12 22:22:39.316294+00:00 [queued]>[0m
+2019-09-12 17:23:18,051 INFO - Sending [1m('stock_data', 'get_amzn_stock_data', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-12 17:23:18,052 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:23:18,053 INFO - Sending [1m('stock_data', 'get_msft_stock_data', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-12 17:23:18,053 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:23:18,054 INFO - Sending [1m('stock_data', 'get_fb_stock_data', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-12 17:23:18,055 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:23:18,056 INFO - Sending [1m('stock_data', 'get_aapl_stock_data', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-12 17:23:18,057 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:23:18,057 INFO - Sending [1m('stock_data', 'get_googl_stock_data', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-12 17:23:18,058 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:23:18,059 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:23:50,312 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:24:22,325 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:24:54,285 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:25:26,115 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:25:57,923 INFO - Executor reports execution of [1mstock_data[0m.[1mget_amzn_stock_data[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:25:57,932 INFO - Executor reports execution of [1mstock_data[0m.[1mget_msft_stock_data[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:25:57,934 INFO - Executor reports execution of [1mstock_data[0m.[1mget_fb_stock_data[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:25:57,936 INFO - Executor reports execution of [1mstock_data[0m.[1mget_aapl_stock_data[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:25:57,938 INFO - Executor reports execution of [1mstock_data[0m.[1mget_googl_stock_data[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:25:58,960 INFO - 2 tasks up for execution:
+	[1m<TaskInstance: stock_data.upload_amzn_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.upload_msft_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:25:58,966 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 2 task instances ready to be queued
+2019-09-12 17:25:58,966 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-12 17:25:58,967 INFO - DAG [1mstock_data[0m has 1/16 running and queued tasks
+2019-09-12 17:25:58,975 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.upload_amzn_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.upload_msft_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:25:58,980 INFO - Setting the following 2 tasks to queued state:
+	[1m<TaskInstance: stock_data.upload_amzn_to_s3 2019-09-12 22:22:39.316294+00:00 [queued]>
+	<TaskInstance: stock_data.upload_msft_to_s3 2019-09-12 22:22:39.316294+00:00 [queued]>[0m
+2019-09-12 17:25:58,981 INFO - Sending [1m('stock_data', 'upload_amzn_to_s3', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m
+2019-09-12 17:25:58,982 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'upload_amzn_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:25:58,982 INFO - Sending [1m('stock_data', 'upload_msft_to_s3', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m
+2019-09-12 17:25:58,983 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'upload_msft_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:25:58,983 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'upload_amzn_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:26:31,269 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'upload_msft_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:27:03,844 INFO - Executor reports execution of [1mstock_data[0m.[1mupload_amzn_to_s3[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:27:03,858 INFO - Executor reports execution of [1mstock_data[0m.[1mupload_msft_to_s3[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:27:04,880 INFO - 3 tasks up for execution:
+	[1m<TaskInstance: stock_data.upload_fb_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.upload_aapl_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.upload_googl_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:27:04,885 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 3 task instances ready to be queued
+2019-09-12 17:27:04,886 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-12 17:27:04,886 INFO - DAG [1mstock_data[0m has 1/16 running and queued tasks
+2019-09-12 17:27:04,887 INFO - DAG [1mstock_data[0m has 2/16 running and queued tasks
+2019-09-12 17:27:04,893 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.upload_fb_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.upload_aapl_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>
+	<TaskInstance: stock_data.upload_googl_to_s3 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:27:04,900 INFO - Setting the following 3 tasks to queued state:
+	[1m<TaskInstance: stock_data.upload_fb_to_s3 2019-09-12 22:22:39.316294+00:00 [queued]>
+	<TaskInstance: stock_data.upload_aapl_to_s3 2019-09-12 22:22:39.316294+00:00 [queued]>
+	<TaskInstance: stock_data.upload_googl_to_s3 2019-09-12 22:22:39.316294+00:00 [queued]>[0m
+2019-09-12 17:27:04,900 INFO - Sending [1m('stock_data', 'upload_fb_to_s3', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m
+2019-09-12 17:27:04,901 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'upload_fb_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:27:04,901 INFO - Sending [1m('stock_data', 'upload_aapl_to_s3', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m
+2019-09-12 17:27:04,902 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'upload_aapl_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:27:04,902 INFO - Sending [1m('stock_data', 'upload_googl_to_s3', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 2 and queue [1mdefault[0m
+2019-09-12 17:27:04,903 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'upload_googl_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:27:04,903 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'upload_fb_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:27:36,810 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'upload_aapl_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:28:08,870 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'upload_googl_to_s3', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:28:41,104 INFO - Executor reports execution of [1mstock_data[0m.[1mupload_fb_to_s3[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:28:41,118 INFO - Executor reports execution of [1mstock_data[0m.[1mupload_aapl_to_s3[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:28:41,121 INFO - Executor reports execution of [1mstock_data[0m.[1mupload_googl_to_s3[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-12 17:28:48,149 INFO - 1 tasks up for execution:
+	[1m<TaskInstance: stock_data.end 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:28:48,155 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued
+2019-09-12 17:28:48,155 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-12 17:28:48,163 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.end 2019-09-12 22:22:39.316294+00:00 [scheduled]>[0m
+2019-09-12 17:28:48,170 INFO - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: stock_data.end 2019-09-12 22:22:39.316294+00:00 [queued]>[0m
+2019-09-12 17:28:48,171 INFO - Sending [1m('stock_data', 'end', datetime.datetime(2019, 9, 12, 22, 22, 39, 316294, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 1 and queue [1mdefault[0m
+2019-09-12 17:28:48,172 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'end', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:28:48,173 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'end', '2019-09-12T22:22:39.316294+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-12 17:29:20,284 INFO - Executor reports execution of [1mstock_data[0m.[1mend[0m execution_date=[1m2019-09-12 22:22:39.316294+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:21:04,609 INFO - 1 tasks up for execution:
+	[1m<TaskInstance: stock_data.start 2019-01-01 17:00:00+00:00 [scheduled]>[0m
+2019-09-16 13:21:04,618 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 1 task instances ready to be queued
+2019-09-16 13:21:04,619 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-16 13:21:04,627 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.start 2019-01-01 17:00:00+00:00 [scheduled]>[0m
+2019-09-16 13:21:04,633 INFO - Setting the following 1 tasks to queued state:
+	[1m<TaskInstance: stock_data.start 2019-01-01 17:00:00+00:00 [queued]>[0m
+2019-09-16 13:21:04,633 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 1, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:21:04,634 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:21:04,635 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:21:37,442 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-01 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:21:38,472 INFO - 5 tasks up for execution:
+	[1m<TaskInstance: stock_data.start 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-08 17:00:00+00:00 [scheduled]>[0m
+2019-09-16 13:21:38,484 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 5 task instances ready to be queued
+2019-09-16 13:21:38,485 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-16 13:21:38,485 INFO - DAG [1mstock_data[0m has 1/16 running and queued tasks
+2019-09-16 13:21:38,486 INFO - DAG [1mstock_data[0m has 2/16 running and queued tasks
+2019-09-16 13:21:38,486 INFO - DAG [1mstock_data[0m has 3/16 running and queued tasks
+2019-09-16 13:21:38,487 INFO - DAG [1mstock_data[0m has 4/16 running and queued tasks
+2019-09-16 13:21:38,495 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.start 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-08 17:00:00+00:00 [scheduled]>[0m
+2019-09-16 13:21:38,503 INFO - Setting the following 5 tasks to queued state:
+	[1m<TaskInstance: stock_data.start 2019-01-02 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-03 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-04 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-07 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-08 17:00:00+00:00 [queued]>[0m
+2019-09-16 13:21:38,503 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 2, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:21:38,504 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:21:38,505 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 3, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:21:38,505 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:21:38,506 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 4, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:21:38,506 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:21:38,507 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 7, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:21:38,507 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-07T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:21:38,508 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 8, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:21:38,508 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:21:38,509 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:22:10,344 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:22:42,304 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:23:14,132 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-07T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:23:46,037 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:18,171 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-02 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:24:18,179 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-03 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:24:18,181 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-04 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:24:18,183 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-07 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:24:18,185 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-08 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:24:19,208 INFO - 25 tasks up for execution:
+	[1m<TaskInstance: stock_data.get_amzn_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-09 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-10 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-11 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-14 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-15 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-16 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 17:10:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 18:10:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 19:10:00+00:00 [scheduled]>[0m
+2019-09-16 13:24:19,214 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 25 task instances ready to be queued
+2019-09-16 13:24:19,215 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-16 13:24:19,216 INFO - DAG [1mstock_data[0m has 1/16 running and queued tasks
+2019-09-16 13:24:19,217 INFO - DAG [1mstock_data[0m has 2/16 running and queued tasks
+2019-09-16 13:24:19,217 INFO - DAG [1mstock_data[0m has 3/16 running and queued tasks
+2019-09-16 13:24:19,218 INFO - DAG [1mstock_data[0m has 4/16 running and queued tasks
+2019-09-16 13:24:19,218 INFO - DAG [1mstock_data[0m has 5/16 running and queued tasks
+2019-09-16 13:24:19,219 INFO - DAG [1mstock_data[0m has 6/16 running and queued tasks
+2019-09-16 13:24:19,219 INFO - DAG [1mstock_data[0m has 7/16 running and queued tasks
+2019-09-16 13:24:19,220 INFO - DAG [1mstock_data[0m has 8/16 running and queued tasks
+2019-09-16 13:24:19,220 INFO - DAG [1mstock_data[0m has 9/16 running and queued tasks
+2019-09-16 13:24:19,221 INFO - DAG [1mstock_data[0m has 10/16 running and queued tasks
+2019-09-16 13:24:19,221 INFO - DAG [1mstock_data[0m has 11/16 running and queued tasks
+2019-09-16 13:24:19,222 INFO - DAG [1mstock_data[0m has 12/16 running and queued tasks
+2019-09-16 13:24:19,223 INFO - DAG [1mstock_data[0m has 13/16 running and queued tasks
+2019-09-16 13:24:19,223 INFO - DAG [1mstock_data[0m has 14/16 running and queued tasks
+2019-09-16 13:24:19,224 INFO - DAG [1mstock_data[0m has 15/16 running and queued tasks
+2019-09-16 13:24:19,224 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,225 INFO - Not executing [1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,225 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,226 INFO - Not executing [1m<TaskInstance: stock_data.get_fb_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,226 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,227 INFO - Not executing [1m<TaskInstance: stock_data.get_aapl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,227 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,228 INFO - Not executing [1m<TaskInstance: stock_data.get_googl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,228 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,229 INFO - Not executing [1m<TaskInstance: stock_data.get_amzn_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,229 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,230 INFO - Not executing [1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,230 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,231 INFO - Not executing [1m<TaskInstance: stock_data.get_fb_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,231 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,232 INFO - Not executing [1m<TaskInstance: stock_data.get_aapl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,232 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:24:19,233 INFO - Not executing [1m<TaskInstance: stock_data.get_googl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:24:19,240 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.start 2019-01-09 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-10 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-11 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-14 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-15 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-16 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 17:10:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 18:10:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.start 2019-01-17 19:10:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-01 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>[0m
+2019-09-16 13:24:19,249 INFO - Setting the following 16 tasks to queued state:
+	[1m<TaskInstance: stock_data.get_amzn_stock_data 2019-01-01 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-01 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-01 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-01 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-01 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-02 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-09 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-10 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-11 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-14 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-15 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-16 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-17 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-17 17:10:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-17 18:10:00+00:00 [queued]>
+	<TaskInstance: stock_data.start 2019-01-17 19:10:00+00:00 [queued]>[0m
+2019-09-16 13:24:19,249 INFO - Sending [1m('stock_data', 'get_amzn_stock_data', datetime.datetime(2019, 1, 1, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:24:19,250 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,250 INFO - Sending [1m('stock_data', 'get_msft_stock_data', datetime.datetime(2019, 1, 1, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:24:19,251 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,251 INFO - Sending [1m('stock_data', 'get_fb_stock_data', datetime.datetime(2019, 1, 1, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:24:19,252 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,252 INFO - Sending [1m('stock_data', 'get_aapl_stock_data', datetime.datetime(2019, 1, 1, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:24:19,252 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,253 INFO - Sending [1m('stock_data', 'get_googl_stock_data', datetime.datetime(2019, 1, 1, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:24:19,253 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,254 INFO - Sending [1m('stock_data', 'get_amzn_stock_data', datetime.datetime(2019, 1, 2, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:24:19,254 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,255 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 9, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,255 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-09T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,256 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 10, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,256 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,256 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 11, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,257 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-11T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,257 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 14, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,258 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-14T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,258 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 15, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,259 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-15T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,259 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 16, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,260 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-16T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,260 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 17, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,260 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,261 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 17, 17, 10, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,261 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T17:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,262 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 17, 18, 10, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,262 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,263 INFO - Sending [1m('stock_data', 'start', datetime.datetime(2019, 1, 17, 19, 10, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 12 and queue [1mdefault[0m
+2019-09-16 13:24:19,263 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:19,264 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-09T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:24:51,134 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:25:23,012 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-11T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:25:54,833 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-14T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:26:26,647 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-15T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:26:58,714 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-16T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:27:30,593 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:28:02,607 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T17:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:28:34,533 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:29:06,433 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'start', '2019-01-17T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:29:38,290 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:30:10,190 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:30:42,246 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:31:19,212 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:31:56,372 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-01T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:32:33,205 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:10,204 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-09 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,216 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-10 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,219 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-11 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,221 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-14 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,223 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-15 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,226 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-16 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,228 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-17 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,231 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-17 17:10:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,233 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-17 18:10:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,235 INFO - Executor reports execution of [1mstock_data[0m.[1mstart[0m execution_date=[1m2019-01-17 19:10:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,237 INFO - Executor reports execution of [1mstock_data[0m.[1mget_amzn_stock_data[0m execution_date=[1m2019-01-01 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,239 INFO - Executor reports execution of [1mstock_data[0m.[1mget_msft_stock_data[0m execution_date=[1m2019-01-01 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,243 INFO - Executor reports execution of [1mstock_data[0m.[1mget_fb_stock_data[0m execution_date=[1m2019-01-01 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,246 INFO - Executor reports execution of [1mstock_data[0m.[1mget_aapl_stock_data[0m execution_date=[1m2019-01-01 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,249 INFO - Executor reports execution of [1mstock_data[0m.[1mget_googl_stock_data[0m execution_date=[1m2019-01-01 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:10,251 INFO - Executor reports execution of [1mstock_data[0m.[1mget_amzn_stock_data[0m execution_date=[1m2019-01-02 17:00:00+00:00[0m exited with status [1msuccess[0m for try_number 1
+2019-09-16 13:33:11,277 INFO - 34 tasks up for execution:
+	[1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>[0m
+2019-09-16 13:33:11,284 INFO - Figuring out tasks to run in Pool(name=[1mdefault_pool[0m) with 128 open slots and 34 task instances ready to be queued
+2019-09-16 13:33:11,285 INFO - DAG [1mstock_data[0m has 0/16 running and queued tasks
+2019-09-16 13:33:11,285 INFO - DAG [1mstock_data[0m has 1/16 running and queued tasks
+2019-09-16 13:33:11,286 INFO - DAG [1mstock_data[0m has 2/16 running and queued tasks
+2019-09-16 13:33:11,286 INFO - DAG [1mstock_data[0m has 3/16 running and queued tasks
+2019-09-16 13:33:11,287 INFO - DAG [1mstock_data[0m has 4/16 running and queued tasks
+2019-09-16 13:33:11,287 INFO - DAG [1mstock_data[0m has 5/16 running and queued tasks
+2019-09-16 13:33:11,288 INFO - DAG [1mstock_data[0m has 6/16 running and queued tasks
+2019-09-16 13:33:11,289 INFO - DAG [1mstock_data[0m has 7/16 running and queued tasks
+2019-09-16 13:33:11,290 INFO - DAG [1mstock_data[0m has 8/16 running and queued tasks
+2019-09-16 13:33:11,290 INFO - DAG [1mstock_data[0m has 9/16 running and queued tasks
+2019-09-16 13:33:11,291 INFO - DAG [1mstock_data[0m has 10/16 running and queued tasks
+2019-09-16 13:33:11,291 INFO - DAG [1mstock_data[0m has 11/16 running and queued tasks
+2019-09-16 13:33:11,292 INFO - DAG [1mstock_data[0m has 12/16 running and queued tasks
+2019-09-16 13:33:11,292 INFO - DAG [1mstock_data[0m has 13/16 running and queued tasks
+2019-09-16 13:33:11,293 INFO - DAG [1mstock_data[0m has 14/16 running and queued tasks
+2019-09-16 13:33:11,294 INFO - DAG [1mstock_data[0m has 15/16 running and queued tasks
+2019-09-16 13:33:11,294 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,295 INFO - Not executing [1m<TaskInstance: stock_data.get_fb_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,295 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,296 INFO - Not executing [1m<TaskInstance: stock_data.get_aapl_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,296 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,297 INFO - Not executing [1m<TaskInstance: stock_data.get_googl_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,298 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,298 INFO - Not executing [1m<TaskInstance: stock_data.get_amzn_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,299 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,299 INFO - Not executing [1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,300 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,300 INFO - Not executing [1m<TaskInstance: stock_data.get_fb_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,301 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,301 INFO - Not executing [1m<TaskInstance: stock_data.get_aapl_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,302 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,302 INFO - Not executing [1m<TaskInstance: stock_data.get_googl_stock_data 2019-01-08 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,303 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,303 INFO - Not executing [1m<TaskInstance: stock_data.get_amzn_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,304 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,304 INFO - Not executing [1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,305 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,306 INFO - Not executing [1m<TaskInstance: stock_data.get_fb_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,306 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,307 INFO - Not executing [1m<TaskInstance: stock_data.get_aapl_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,307 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,307 INFO - Not executing [1m<TaskInstance: stock_data.get_googl_stock_data 2019-01-09 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,308 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,308 INFO - Not executing [1m<TaskInstance: stock_data.get_amzn_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,309 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,309 INFO - Not executing [1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,310 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,310 INFO - Not executing [1m<TaskInstance: stock_data.get_fb_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,311 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,311 INFO - Not executing [1m<TaskInstance: stock_data.get_aapl_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,311 INFO - DAG [1mstock_data[0m has 16/16 running and queued tasks
+2019-09-16 13:33:11,312 INFO - Not executing [1m<TaskInstance: stock_data.get_googl_stock_data 2019-01-10 17:00:00+00:00 [scheduled]>[0m since the number of tasks running or queued from DAG [1mstock_data[0m is >= to the DAG's task concurrency limit of 16
+2019-09-16 13:33:11,319 INFO - Setting the follow tasks to queued state:
+	[1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-02 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-03 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-04 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-07 17:00:00+00:00 [scheduled]>[0m
+2019-09-16 13:33:11,328 INFO - Setting the following 16 tasks to queued state:
+	[1m<TaskInstance: stock_data.get_msft_stock_data 2019-01-02 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-02 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-02 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-02 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-03 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-03 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-03 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-03 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-03 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-04 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-04 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_fb_stock_data 2019-01-04 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_aapl_stock_data 2019-01-04 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_googl_stock_data 2019-01-04 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_amzn_stock_data 2019-01-07 17:00:00+00:00 [queued]>
+	<TaskInstance: stock_data.get_msft_stock_data 2019-01-07 17:00:00+00:00 [queued]>[0m
+2019-09-16 13:33:11,328 INFO - Sending [1m('stock_data', 'get_msft_stock_data', datetime.datetime(2019, 1, 2, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,329 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,330 INFO - Sending [1m('stock_data', 'get_fb_stock_data', datetime.datetime(2019, 1, 2, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,330 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,331 INFO - Sending [1m('stock_data', 'get_aapl_stock_data', datetime.datetime(2019, 1, 2, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,331 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,332 INFO - Sending [1m('stock_data', 'get_googl_stock_data', datetime.datetime(2019, 1, 2, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,332 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,332 INFO - Sending [1m('stock_data', 'get_amzn_stock_data', datetime.datetime(2019, 1, 3, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,333 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,333 INFO - Sending [1m('stock_data', 'get_msft_stock_data', datetime.datetime(2019, 1, 3, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,334 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,334 INFO - Sending [1m('stock_data', 'get_fb_stock_data', datetime.datetime(2019, 1, 3, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,335 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,335 INFO - Sending [1m('stock_data', 'get_aapl_stock_data', datetime.datetime(2019, 1, 3, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,335 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,336 INFO - Sending [1m('stock_data', 'get_googl_stock_data', datetime.datetime(2019, 1, 3, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,336 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,337 INFO - Sending [1m('stock_data', 'get_amzn_stock_data', datetime.datetime(2019, 1, 4, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,338 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,338 INFO - Sending [1m('stock_data', 'get_msft_stock_data', datetime.datetime(2019, 1, 4, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,339 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,339 INFO - Sending [1m('stock_data', 'get_fb_stock_data', datetime.datetime(2019, 1, 4, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,339 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,340 INFO - Sending [1m('stock_data', 'get_aapl_stock_data', datetime.datetime(2019, 1, 4, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,340 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,341 INFO - Sending [1m('stock_data', 'get_googl_stock_data', datetime.datetime(2019, 1, 4, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,341 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,342 INFO - Sending [1m('stock_data', 'get_amzn_stock_data', datetime.datetime(2019, 1, 7, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,342 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-07T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,342 INFO - Sending [1m('stock_data', 'get_msft_stock_data', datetime.datetime(2019, 1, 7, 17, 0, tzinfo=<Timezone [UTC]>), 1)[0m to executor with priority 3 and queue [1mdefault[0m
+2019-09-16 13:33:11,343 INFO - Adding to queue: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-07T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:11,344 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:33:43,945 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:34:15,981 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:34:52,986 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-02T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:35:30,101 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:36:07,027 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:36:43,968 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:37:15,870 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:37:47,736 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-03T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:38:24,660 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:38:56,687 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_msft_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:39:29,177 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_fb_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:40:06,241 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_aapl_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:40:43,219 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_googl_stock_data', '2019-01-04T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:41:20,098 INFO - Executing command: [1m['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-01-07T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/Users/hdeva/airflow/dags/hello_world_dag.py'][0m
+2019-09-16 13:41:35,557 INFO - Exited execute loop

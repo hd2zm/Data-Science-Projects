@@ -1,0 +1,152 @@
+[2019-08-28 14:32:55,323] {taskinstance.py:616} INFO - Dependencies all met for <TaskInstance: stock_data.get_amzn_stock_data 2019-08-28T19:31:59.615125+00:00 [queued]>
+[2019-08-28 14:32:55,330] {taskinstance.py:616} INFO - Dependencies all met for <TaskInstance: stock_data.get_amzn_stock_data 2019-08-28T19:31:59.615125+00:00 [queued]>
+[2019-08-28 14:32:55,330] {taskinstance.py:834} INFO - 
+--------------------------------------------------------------------------------
+[2019-08-28 14:32:55,330] {taskinstance.py:835} INFO - Starting attempt 1 of 2
+[2019-08-28 14:32:55,330] {taskinstance.py:836} INFO - 
+--------------------------------------------------------------------------------
+[2019-08-28 14:32:55,343] {taskinstance.py:855} INFO - Executing <Task(PythonOperator): get_amzn_stock_data> on 2019-08-28T19:31:59.615125+00:00
+[2019-08-28 14:32:55,343] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'stock_data', 'get_amzn_stock_data', '2019-08-28T19:31:59.615125+00:00', '--job_id', '28', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/hello_world_dag.py', '--cfg_path', '/var/folders/z6/sk1b92g1385cmsp5qvg672kr0000gn/T/tmpa_ejx_hb']
+[2019-08-28 14:32:56,094] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data [2019-08-28 14:32:56,094] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-08-28 14:32:56,437] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data [2019-08-28 14:32:56,436] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-08-28 14:33:01,732] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data [2019-08-28 14:33:01,732] {cli.py:516} INFO - Running <TaskInstance: stock_data.get_amzn_stock_data 2019-08-28T19:31:59.615125+00:00 [running]> on host Haris-MacBook-Pro.local
+[2019-08-28 14:33:06,747] {python_operator.py:105} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=stock_data
+AIRFLOW_CTX_TASK_ID=get_amzn_stock_data
+AIRFLOW_CTX_EXECUTION_DATE=2019-08-28T19:31:59.615125+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-08-28T19:31:59.615125+00:00
+[2019-08-28 14:34:22,086] {taskinstance.py:1047} ERROR - HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN/prices?startDate=2015-01-01&endDate=2019-08-28&format=json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x116fcfba8>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+Traceback (most recent call last):
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+    conn.connect()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 301, in connect
+    conn = self._new_conn()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x116fcfba8>: Failed to establish a new connection: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN/prices?startDate=2015-01-01&endDate=2019-08-28&format=json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x116fcfba8>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 922, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 113, in execute
+    return_value = self.execute_callable()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 118, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/Users/hdeva/airflow/dags/hello_world_dag.py", line 31, in get_stock_data
+    stock_df = df.read()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/pandas_datareader/tiingo.py", line 105, in read
+    dfs.append(self._read_one_data(self.url, self.params))
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/pandas_datareader/tiingo.py", line 89, in _read_one_data
+    out = self._get_response(url, params=params, headers=headers).json()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 132, in _get_response
+    headers=headers)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN/prices?startDate=2015-01-01&endDate=2019-08-28&format=json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x116fcfba8>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+[2019-08-28 14:34:22,102] {taskinstance.py:1070} INFO - Marking task as UP_FOR_RETRY
+[2019-08-28 14:34:22,115] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data Traceback (most recent call last):
+[2019-08-28 14:34:22,115] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 159, in _new_conn
+[2019-08-28 14:34:22,115] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     (self._dns_host, self.port), self.timeout, **extra_kw)
+[2019-08-28 14:34:22,115] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 80, in create_connection
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     raise err
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 70, in create_connection
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     sock.connect(sa)
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data TimeoutError: [Errno 60] Operation timed out
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data 
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data During handling of the above exception, another exception occurred:
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data 
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data Traceback (most recent call last):
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     chunked=chunked)
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 343, in _make_request
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     self._validate_conn(conn)
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 839, in _validate_conn
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     conn.connect()
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 301, in connect
+[2019-08-28 14:34:22,116] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     conn = self._new_conn()
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 168, in _new_conn
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     self, "Failed to establish a new connection: %s" % e)
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x116fcfba8>: Failed to establish a new connection: [Errno 60] Operation timed out
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data 
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data During handling of the above exception, another exception occurred:
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data 
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data Traceback (most recent call last):
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     timeout=timeout
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     _stacktrace=sys.exc_info()[2])
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 398, in increment
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     raise MaxRetryError(_pool, url, error or ResponseError(cause))
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN/prices?startDate=2015-01-01&endDate=2019-08-28&format=json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x116fcfba8>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data 
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data During handling of the above exception, another exception occurred:
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data 
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data Traceback (most recent call last):
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/bin/airflow", line 32, in <module>
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     args.func(args)
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     return f(*args, **kwargs)
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/bin/cli.py", line 522, in run
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     _run(args, dag, ti)
+[2019-08-28 14:34:22,117] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/bin/cli.py", line 440, in _run
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     pool=args.pool,
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     return func(*args, **kwargs)
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 922, in _run_raw_task
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     result = task_copy.execute(context=context)
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 113, in execute
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     return_value = self.execute_callable()
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/operators/python_operator.py", line 118, in execute_callable
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     return self.python_callable(*self.op_args, **self.op_kwargs)
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/airflow/dags/hello_world_dag.py", line 31, in get_stock_data
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     stock_df = df.read()
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/pandas_datareader/tiingo.py", line 105, in read
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     dfs.append(self._read_one_data(self.url, self.params))
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/pandas_datareader/tiingo.py", line 89, in _read_one_data
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     out = self._get_response(url, params=params, headers=headers).json()
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/pandas_datareader/base.py", line 132, in _get_response
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     headers=headers)
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 546, in get
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     return self.request('GET', url, **kwargs)
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     resp = self.send(prep, **send_kwargs)
+[2019-08-28 14:34:22,118] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+[2019-08-28 14:34:22,119] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     r = adapter.send(request, **kwargs)
+[2019-08-28 14:34:22,119] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data   File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+[2019-08-28 14:34:22,119] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data     raise ConnectionError(e, request=request)
+[2019-08-28 14:34:22,119] {base_task_runner.py:115} INFO - Job 28: Subtask get_amzn_stock_data requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.tiingo.com', port=443): Max retries exceeded with url: /tiingo/daily/AMZN/prices?startDate=2015-01-01&endDate=2019-08-28&format=json (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x116fcfba8>: Failed to establish a new connection: [Errno 60] Operation timed out',))
+[2019-08-28 14:34:25,651] {logging_mixin.py:95} INFO - [[34m2019-08-28 14:34:25,650[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 1[0m

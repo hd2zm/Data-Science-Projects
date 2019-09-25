@@ -1,0 +1,13 @@
+[2019-09-16 13:23:30,658] {taskinstance.py:616} INFO - Dependencies all met for <TaskInstance: stock_data.start 2019-01-07T17:00:00+00:00 [queued]>
+[2019-09-16 13:23:30,663] {taskinstance.py:616} INFO - Dependencies all met for <TaskInstance: stock_data.start 2019-01-07T17:00:00+00:00 [queued]>
+[2019-09-16 13:23:30,663] {taskinstance.py:834} INFO - 
+--------------------------------------------------------------------------------
+[2019-09-16 13:23:30,663] {taskinstance.py:835} INFO - Starting attempt 1 of 2
+[2019-09-16 13:23:30,663] {taskinstance.py:836} INFO - 
+--------------------------------------------------------------------------------
+[2019-09-16 13:23:30,676] {taskinstance.py:855} INFO - Executing <Task(DummyOperator): start> on 2019-01-07T17:00:00+00:00
+[2019-09-16 13:23:30,676] {base_task_runner.py:133} INFO - Running: ['airflow', 'run', 'stock_data', 'start', '2019-01-07T17:00:00+00:00', '--job_id', '81', '--pool', 'default_pool', '--raw', '-sd', 'DAGS_FOLDER/hello_world_dag.py', '--cfg_path', '/var/folders/z6/sk1b92g1385cmsp5qvg672kr0000gn/T/tmptv7y2dj7']
+[2019-09-16 13:23:31,454] {base_task_runner.py:115} INFO - Job 81: Subtask start [2019-09-16 13:23:31,454] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-09-16 13:23:31,800] {base_task_runner.py:115} INFO - Job 81: Subtask start [2019-09-16 13:23:31,799] {dagbag.py:90} INFO - Filling up the DagBag from /Users/hdeva/airflow/dags/hello_world_dag.py
+[2019-09-16 13:23:37,121] {base_task_runner.py:115} INFO - Job 81: Subtask start [2019-09-16 13:23:37,120] {cli.py:516} INFO - Running <TaskInstance: stock_data.start 2019-01-07T17:00:00+00:00 [running]> on host Haris-MacBook-Pro.local
+[2019-09-16 13:23:45,738] {logging_mixin.py:95} INFO - [[34m2019-09-16 13:23:45,735[0m] {[34mlocal_task_job.py:[0m105} INFO[0m - Task exited with return code 0[0m

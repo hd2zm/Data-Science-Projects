@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/lockfile/pidlockfile.py", line 77, in acquire
+    write_pid_to_pidfile(self.path)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/lockfile/pidlockfile.py", line 161, in write_pid_to_pidfile
+    pidfile_fd = os.open(pidfile_path, open_flags, open_mode)
+FileExistsError: [Errno 17] File exists: '/Users/hdeva/airflow/airflow-scheduler.pid'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hdeva/anaconda3/bin/airflow", line 32, in <module>
+    args.func(args)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/utils/cli.py", line 74, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/airflow/bin/cli.py", line 1004, in scheduler
+    with ctx:
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/daemon/daemon.py", line 397, in __enter__
+    self.open()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/daemon/daemon.py", line 389, in open
+    self.pidfile.__enter__()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/lockfile/__init__.py", line 197, in __enter__
+    self.acquire()
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/daemon/pidfile.py", line 60, in acquire
+    super(TimeoutPIDLockFile, self).acquire(timeout, *args, **kwargs)
+  File "/Users/hdeva/anaconda3/lib/python3.6/site-packages/lockfile/pidlockfile.py", line 88, in acquire
+    self.path)
+lockfile.AlreadyLocked: /Users/hdeva/airflow/airflow-scheduler.pid is already locked
