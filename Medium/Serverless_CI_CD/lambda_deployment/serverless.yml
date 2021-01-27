@@ -1,0 +1,60 @@
+service: model-predict
+
+package:
+  include:
+    - ./requirements.txt
+    - ./model_predict_lambda.py
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: ${self:custom.region}
+  memorySize: ${self:custom.memorySize}
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action: 
+        - "lambda:InvokeFunction"
+      Resource: "*"
+    - Effect: "Allow"
+      Action: 
+        - "iam:GetRole"
+      Resource: "*"
+    - Effect: "Allow"
+      Action: 
+        - "sqs:CreateQueue"
+        - "sqs:GetQueueUrl"
+        - "sqs:SendMessage"
+        - "ecr:DescribeRepositories" 
+      Resource: "*"
+
+
+functions:
+  get_veteran_to_provider_travel_times:
+    handler: model_predict_lambda.model_predict_handler
+    provisionedConcurrency: 1 # optional, Count of provisioned lambda instances
+    reservedConcurrency: 1 # optional, reserved concurrency limit for this function. By default, AWS uses account concurrency limit
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - TriggerLambdaSQS
+              - Arn
+          batchSize: 1
+
+resources:
+  Resources:
+    TriggerQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "TriggerLambdaSQS"
+        VisibilityTimeout: 30
+        MessageRetentionPeriod: 60
+        RedrivePolicy:
+          deadLetterTargetArn:
+            "Fn::GetAtt":
+              - DeadletterSQS
+              - Arn
+          maxReceiveCount: 1
+          
+plugins:
+  - serverless-python-requirements

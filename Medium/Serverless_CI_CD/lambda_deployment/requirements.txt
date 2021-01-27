@@ -1,0 +1,5 @@
+numpy
+pandas
+boto3
+sagemaker
+sklearn

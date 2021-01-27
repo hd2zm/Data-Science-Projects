@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Running pre build commands
+      - apt-get update
+      - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7EA0A9C3F273FCD8
+      - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+      - apt-get -y install docker-ce docker-ce-cli containerd.io
+      - npm install -g serverless --unsafe
+      - npm i -D serverless-dotenv-plugin
+      - npm install serverless-plugin-aws-alerts --save-dev
+      - sls plugin install -n serverless-python-requirements
+      - apt-get -y install python3-pip
+      - pip3 install awscli --upgrade --user
+      - pip3 install aws_lambda_wsgi
+      - pip3 install boto3
+  build:
+    commands:
+      - echo "Running build commands"
+      - pip3 install -r requirements.txt
+      - sls deploy --verbose
+      - echo "Finished deploying to Lambda and SQS"
