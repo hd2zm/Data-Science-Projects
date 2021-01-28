@@ -2,7 +2,6 @@ service: model-predict
 
 package:
   include:
-    - ./requirements.txt
     - ./model_predict_lambda.py
 
 provider:
@@ -29,7 +28,7 @@ provider:
 
 
 functions:
-  get_veteran_to_provider_travel_times:
+  get_model_predictions:
     handler: model_predict_lambda.model_predict_handler
     provisionedConcurrency: 1 # optional, Count of provisioned lambda instances
     reservedConcurrency: 1 # optional, reserved concurrency limit for this function. By default, AWS uses account concurrency limit
