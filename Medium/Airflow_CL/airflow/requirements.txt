@@ -1,0 +1,5 @@
+statsmodels
+pickle
+pandas_datareader
+pandas
+boto3
