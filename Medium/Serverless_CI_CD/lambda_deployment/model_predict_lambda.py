@@ -1,9 +1,3 @@
-"""
- Baseline model to rank based on combination of Manhattan and Haversine distance
- 
- Source: https://medium.com/@simplyjk/why-manhattan-distance-formula-doesnt-apply-to-manhattan-7db0ebb1c5f6
-"""
-
 import pandas as pd
 import json
 import boto3
