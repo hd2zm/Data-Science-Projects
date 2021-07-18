@@ -1,5 +1,4 @@
 statsmodels
-pickle
-pandas_datareader
 pandas
+pandas_datareader
 boto3
