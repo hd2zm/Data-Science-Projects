@@ -29,7 +29,7 @@ def get_stock_data(**kwargs):
     start = datetime(2015, 1, 1)
     end = datetime.now()
     
-    api_token="0492b847e65cfba1e9abb96cb013c78404d0eb4f"
+    api_token=""
     
     df = TiingoDailyReader(kwargs["params"]["stock"], start=start, end=end, api_key=api_token)
     
