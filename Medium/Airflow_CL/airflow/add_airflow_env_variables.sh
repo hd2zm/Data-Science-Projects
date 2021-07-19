@@ -1,2 +1,1 @@
-export AIRFLOW_HOME=/opt/airflow
-export NLP4MHRC_APP_ROOT=../
+export AIRFLOW_HOME=~/Data-Science-Projects/Medium/Airflow_CL/airflow
