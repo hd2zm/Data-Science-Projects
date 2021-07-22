@@ -15,10 +15,11 @@ import statsmodels.api as sm
 
 from datetime import date, timedelta, datetime
 
-
+import pandas as pd
 import pandas_datareader as pdr
 from pandas_datareader.tiingo import TiingoDailyReader
 import pickle
+import ast
 
 from io import StringIO
 import boto3
@@ -37,13 +38,15 @@ def get_stock_data(**kwargs):
     
     stock_df = stock_df.reset_index()
     
-    return stock_df
+    return stock_df.to_json()
 
 def store_arima_model_in_s3(**kwargs):
     
     ti=kwargs['ti']
-    
-    train_data_df = ti.xcom_pull(task_ids=kwargs["params"]["stock_ti"])
+
+    train_data_json = ti.xcom_pull(task_ids=kwargs["params"]["stock_ti"])
+    train_data_json = ast.literal_eval(train_data_json)
+    train_data_df = pd.DataFrame.from_dict(train_data_json.items(), orient='columns')
 
     # fit model
     model=sm.tsa.ARIMA(endog=train_data_df, order=(1,1,0))
@@ -51,8 +54,8 @@ def store_arima_model_in_s3(**kwargs):
 
     #dump to s3
     stock = train_data_df['symbol'][0]
-    
-    key = stock + '_arima_model.pkl'  
+
+    key = stock + '_arima_model.pkl'
     bucket='stock-models'
     pickle_byte_obj = pickle.dumps(model_fit) 
     s3_resource = boto3.resource('s3')
