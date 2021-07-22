@@ -38,7 +38,7 @@ def get_stock_data(**kwargs):
     
     stock_df = stock_df.reset_index()
     
-    return stock_df.to_json()
+    return stock_df.to_json(orient='columns')
 
 def store_arima_model_in_s3(**kwargs):
     
@@ -46,10 +46,10 @@ def store_arima_model_in_s3(**kwargs):
 
     train_data_json = ti.xcom_pull(task_ids=kwargs["params"]["stock_ti"])
     train_data_json = ast.literal_eval(train_data_json)
-    train_data_df = pd.DataFrame.from_dict(train_data_json.items(), orient='columns')
+    train_data_df = pd.DataFrame.from_dict(train_data_json, orient='columns')
 
     # fit model
-    model=sm.tsa.ARIMA(endog=train_data_df, order=(1,1,0))
+    model=sm.tsa.ARIMA(endog=train_data_df["adjClose"], order=(1,1,0))
     model_fit = model.fit(disp=False)
 
     #dump to s3
