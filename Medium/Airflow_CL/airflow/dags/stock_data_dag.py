@@ -56,7 +56,7 @@ def store_arima_model_in_s3(**kwargs):
     stock = train_data_df['symbol'][0]
 
     key = stock + '_arima_model.pkl'
-    bucket='stock-models'
+    bucket='stock-model'
     pickle_byte_obj = pickle.dumps(model_fit) 
     s3_resource = boto3.resource('s3')
     s3_resource.Object(bucket,key).put(Body=pickle_byte_obj)    
