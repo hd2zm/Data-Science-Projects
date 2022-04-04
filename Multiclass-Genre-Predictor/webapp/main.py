@@ -21,8 +21,8 @@ app = Flask(__name__)
 def initiate_spotify_credentials():
     global sp
 
-    cid ="403359461f0b4827adf4b8c3b6dd87d9" 
-    secret = "f4837ee0941b4a769c345cc4b7b98156" 
+    cid ="" 
+    secret = "" 
     client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret) 
     sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager) 
     sp.trace=False 
