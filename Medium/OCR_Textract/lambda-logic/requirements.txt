@@ -1,0 +1,4 @@
+textract-trp
+boto3
+poppler-utils
+pdf2image
