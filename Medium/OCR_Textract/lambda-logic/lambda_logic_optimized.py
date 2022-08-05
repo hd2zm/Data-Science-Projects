@@ -6,15 +6,15 @@ from datetime import datetime
 from pdf2image import convert_from_bytes
 from io import BytesIO
 
+# Amazon Textract client
+textract = boto3.client('textract', region)
+# Amazon S3 Client
+s3_client = boto3.client('s3')
+
 def send_from_s3_to_textract(event, context):
 
         region = ""
         accountId = ""
-        
-        # Amazon Textract client
-        textract = boto3.client('textract', region)
-        # Amazon S3 Client
-        s3_client = boto3.client('s3')
 
         records = event["Records"]
         for record in records:
