@@ -11,8 +11,6 @@ def send_from_s3_to_textract(event, context):
         region = ""
         accountId = ""
         
-        # Amazon SageMaker client
-        sagemaker = boto3.client('sagemaker', region)
         # Amazon Textract client
         textract = boto3.client('textract', region)
         # Amazon S3 Client
