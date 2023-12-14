@@ -9,8 +9,8 @@ from dash import Dash, html, dcc, callback, Output, Input
 
 app = Dash(__name__)
 
-df = pd.read_csv('datasets/names_by_state_cleaned.csv')
-f = open("us-states/us-states.json")
+df = pd.read_csv('names_by_state_cleaned.csv')
+f = open("us-states.json")
 us_states = json.load(f)
 
 year_values = df["year"].unique()
