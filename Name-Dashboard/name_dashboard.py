@@ -97,9 +97,7 @@ def update_graphs(sex_value, rank_value, name_for_map_value, click_data):
 
     state = initial_state
     year = initial_year
-    print(state)
     if click_data:
-        print(click_data)
         state = click_data['points'][0]['location']
         year = click_data['points'][0]['customdata'][0]
 
